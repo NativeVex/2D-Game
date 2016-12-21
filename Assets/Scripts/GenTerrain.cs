@@ -2,17 +2,23 @@
 using System.Collections;
 using System;
 
-public sealed class GenTerrain {
-	static readonly GenTerrain Instance =
-	private int dim;
-	private static Sprite[] prefabs;
-	Sprite[][] Sto;
+public class GenTerrain: MonoBehaviour {
+	public GameObject[] prefabs;
+	public GameObject[,] Sto;
+	public int dim;
+	public int scale;
 	// Use this for initialization
-	private GenTerrain (int dim) {
-		this.dim = dim;
-		//gen terrain here
-	
+	void Start() {
+		//gen default terrain here
+		for (int x = 0; x < dim; x++) {
+			for (int y = 0; y < dim; y++) {
+				Sto [x, y] = (GameObject)Instantiate(prefabs [0]
+					,new Vector3(x*scale,y*scale,0)
+					,Quaternion.identity);
+			}
+		}
 	}
+		
 
 	void addTo(){
 		
