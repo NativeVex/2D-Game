@@ -2,16 +2,13 @@
 using System.Collections;
 using System;
 
-public struct GenTerrain {
+public sealed class GenTerrain {
+	static readonly GenTerrain Instance =
 	private int dim;
 	private static Sprite[] prefabs;
-	Sprite[][] Sto {
-		get {
-			return new Sprite[dim][dim];
-		}
-	}
+	Sprite[][] Sto;
 	// Use this for initialization
-	GenTerrain (int dim) {
+	private GenTerrain (int dim) {
 		this.dim = dim;
 		//gen terrain here
 	
