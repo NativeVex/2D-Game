@@ -1,0 +1,5 @@
+Direction variable (created in animator)
+1=down
+2=left
+3=up
+4=right
