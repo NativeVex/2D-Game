@@ -1,0 +1,521 @@
+fileFormatVersion: 2
+guid: cac8f0f9147d1d147a59b8cd263d0e89
+timeCreated: 1484058626
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Companion_Sprite_0
+    21300002: Companion_Sprite_1
+    21300004: Companion_Sprite_2
+    21300006: Companion_Sprite_3
+    21300008: Companion_Sprite_4
+    21300010: Companion_Sprite_5
+    21300012: Companion_Sprite_6
+    21300014: Companion_Sprite_7
+    21300016: Companion_Sprite_8
+    21300018: Companion_Sprite_9
+    21300020: Companion_Sprite_10
+    21300022: Companion_Sprite_11
+    21300024: Companion_Sprite_12
+    21300026: Companion_Sprite_13
+    21300028: Companion_Sprite_14
+    21300030: Companion_Sprite_15
+    21300032: Companion_Sprite_16
+    21300034: Companion_Sprite_17
+    21300036: Companion_Sprite_18
+    21300038: Companion_Sprite_19
+    21300040: Companion_Sprite_20
+    21300042: Companion_Sprite_21
+    21300044: Companion_Sprite_22
+    21300046: Companion_Sprite_23
+    21300048: Companion_Sprite_24
+    21300050: Companion_Sprite_25
+    21300052: Companion_Sprite_26
+    21300054: Companion_Sprite_27
+    21300056: Companion_Sprite_28
+    21300058: Companion_Sprite_29
+    21300060: Companion_Sprite_30
+    21300062: Companion_Sprite_31
+    21300064: Companion_Sprite_32
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Companion_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 399
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 399
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 399
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 339
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 339
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 339
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 285
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 285
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 285
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 231
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_10
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 231
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 229
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_12
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 117
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_13
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 117
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_14
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 117
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_15
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 61
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_16
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 61
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_17
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 61
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_18
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 7
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_19
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 6
+        width: 54
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_20
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 7
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_21
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 425
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 229
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_23
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 425
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_24
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 229
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_25
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 369
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_26
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 369
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_27
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 319
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 179
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_29
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 319
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_30
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 269
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_31
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 179
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Companion_Sprite_32
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 271
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
