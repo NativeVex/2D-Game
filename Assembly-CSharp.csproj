@@ -45,7 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\GenTerrain.cs" />
+     <Compile Include="Assets\Scripts\GenGrass.cs" />
+     <Compile Include="Assets\Scripts\GrassAnimSpeed.cs" />
+     <Compile Include="Assets\Scripts\GrassBehaviour.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
