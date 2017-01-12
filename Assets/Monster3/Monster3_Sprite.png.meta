@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2933ae580fcc4f74abd63813ad0860f8
-timeCreated: 1484025283
+timeCreated: 1484147729
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -175,7 +175,7 @@ TextureImporter:
       name: Monster3_Sprite_8
       rect:
         serializedVersion: 2
-        x: 114
+        x: 14
         y: 9
         width: 30
         height: 56
@@ -201,7 +201,7 @@ TextureImporter:
       name: Monster3_Sprite_10
       rect:
         serializedVersion: 2
-        x: 14
+        x: 114
         y: 9
         width: 30
         height: 56

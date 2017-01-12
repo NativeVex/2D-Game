@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cea6dec5e31e72d419baef38beb35aa9
-timeCreated: 1484063394
+timeCreated: 1484149745
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -203,6 +203,7 @@ TextureImporter:
     21300392: Slime_Monster_Right_196
     21300394: Slime_Monster_Right_197
     21300396: Slime_Monster_Right_198
+    21300398: Slime_Monster_Right_199
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -2582,9 +2583,9 @@ TextureImporter:
       name: Slime_Monster_Right_179
       rect:
         serializedVersion: 2
-        x: 298
-        y: 32
-        width: 21
+        x: 9
+        y: 64
+        width: 15
         height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2595,7 +2596,7 @@ TextureImporter:
       name: Slime_Monster_Right_180
       rect:
         serializedVersion: 2
-        x: 266
+        x: 298
         y: 32
         width: 21
         height: 15
@@ -2608,7 +2609,7 @@ TextureImporter:
       name: Slime_Monster_Right_181
       rect:
         serializedVersion: 2
-        x: 234
+        x: 266
         y: 32
         width: 21
         height: 15
@@ -2621,7 +2622,7 @@ TextureImporter:
       name: Slime_Monster_Right_182
       rect:
         serializedVersion: 2
-        x: 202
+        x: 234
         y: 32
         width: 21
         height: 15
@@ -2634,7 +2635,7 @@ TextureImporter:
       name: Slime_Monster_Right_183
       rect:
         serializedVersion: 2
-        x: 170
+        x: 202
         y: 32
         width: 21
         height: 15
@@ -2647,7 +2648,7 @@ TextureImporter:
       name: Slime_Monster_Right_184
       rect:
         serializedVersion: 2
-        x: 138
+        x: 170
         y: 32
         width: 21
         height: 15
@@ -2660,7 +2661,7 @@ TextureImporter:
       name: Slime_Monster_Right_185
       rect:
         serializedVersion: 2
-        x: 106
+        x: 138
         y: 32
         width: 21
         height: 15
@@ -2673,7 +2674,7 @@ TextureImporter:
       name: Slime_Monster_Right_186
       rect:
         serializedVersion: 2
-        x: 74
+        x: 106
         y: 32
         width: 21
         height: 15
@@ -2686,7 +2687,7 @@ TextureImporter:
       name: Slime_Monster_Right_187
       rect:
         serializedVersion: 2
-        x: 42
+        x: 74
         y: 32
         width: 21
         height: 15
@@ -2699,7 +2700,7 @@ TextureImporter:
       name: Slime_Monster_Right_188
       rect:
         serializedVersion: 2
-        x: 10
+        x: 42
         y: 32
         width: 21
         height: 15
@@ -2712,10 +2713,10 @@ TextureImporter:
       name: Slime_Monster_Right_189
       rect:
         serializedVersion: 2
-        x: 297
-        y: 0
-        width: 15
-        height: 10
+        x: 10
+        y: 32
+        width: 21
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2725,7 +2726,7 @@ TextureImporter:
       name: Slime_Monster_Right_190
       rect:
         serializedVersion: 2
-        x: 265
+        x: 297
         y: 0
         width: 14
         height: 10
@@ -2738,7 +2739,7 @@ TextureImporter:
       name: Slime_Monster_Right_191
       rect:
         serializedVersion: 2
-        x: 233
+        x: 265
         y: 0
         width: 14
         height: 10
@@ -2751,7 +2752,7 @@ TextureImporter:
       name: Slime_Monster_Right_192
       rect:
         serializedVersion: 2
-        x: 201
+        x: 233
         y: 0
         width: 14
         height: 10
@@ -2764,7 +2765,7 @@ TextureImporter:
       name: Slime_Monster_Right_193
       rect:
         serializedVersion: 2
-        x: 169
+        x: 201
         y: 0
         width: 14
         height: 10
@@ -2777,7 +2778,7 @@ TextureImporter:
       name: Slime_Monster_Right_194
       rect:
         serializedVersion: 2
-        x: 137
+        x: 169
         y: 0
         width: 14
         height: 10
@@ -2790,7 +2791,7 @@ TextureImporter:
       name: Slime_Monster_Right_195
       rect:
         serializedVersion: 2
-        x: 105
+        x: 137
         y: 0
         width: 14
         height: 10
@@ -2803,7 +2804,7 @@ TextureImporter:
       name: Slime_Monster_Right_196
       rect:
         serializedVersion: 2
-        x: 73
+        x: 105
         y: 0
         width: 14
         height: 10
@@ -2816,7 +2817,7 @@ TextureImporter:
       name: Slime_Monster_Right_197
       rect:
         serializedVersion: 2
-        x: 41
+        x: 73
         y: 0
         width: 14
         height: 10
@@ -2827,6 +2828,19 @@ TextureImporter:
       tessellationDetail: 0
     - serializedVersion: 2
       name: Slime_Monster_Right_198
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 0
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Slime_Monster_Right_199
       rect:
         serializedVersion: 2
         x: 9
