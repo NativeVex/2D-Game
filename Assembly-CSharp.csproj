@@ -45,6 +45,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DungeonVoxels\Scripts\Knight.cs" />
+     <Compile Include="Assets\DungeonVoxels\Scripts\LightFlicker.cs" />
+     <Compile Include="Assets\DungeonVoxels\Scripts\SpikeTrap.cs" />
+     <Compile Include="Assets\DungeonVoxels\Scripts\TargetFollow.cs" />
+     <Compile Include="Assets\RotateWithCamera.cs" />
      <Compile Include="Assets\Scripts\GenGrass.cs" />
      <Compile Include="Assets\Scripts\GrassAnimSpeed.cs" />
      <Compile Include="Assets\Scripts\GrassBehaviour.cs" />
