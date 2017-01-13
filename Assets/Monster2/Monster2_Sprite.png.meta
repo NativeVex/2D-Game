@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1238602d84212f1478ef6f2b92b93405
-timeCreated: 1484025028
+timeCreated: 1484276130
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -79,7 +79,7 @@ TextureImporter:
       name: Monster2_Sprite_0
       rect:
         serializedVersion: 2
-        x: 19
+        x: 13
         y: 243
         width: 23
         height: 29
@@ -92,7 +92,7 @@ TextureImporter:
       name: Monster2_Sprite_1
       rect:
         serializedVersion: 2
-        x: 83
+        x: 77
         y: 243
         width: 23
         height: 29
@@ -105,7 +105,7 @@ TextureImporter:
       name: Monster2_Sprite_2
       rect:
         serializedVersion: 2
-        x: 148
+        x: 142
         y: 243
         width: 23
         height: 29
@@ -118,7 +118,7 @@ TextureImporter:
       name: Monster2_Sprite_3
       rect:
         serializedVersion: 2
-        x: 212
+        x: 206
         y: 243
         width: 23
         height: 29
@@ -131,7 +131,7 @@ TextureImporter:
       name: Monster2_Sprite_4
       rect:
         serializedVersion: 2
-        x: 18
+        x: 13
         y: 179
         width: 26
         height: 35
@@ -144,7 +144,7 @@ TextureImporter:
       name: Monster2_Sprite_5
       rect:
         serializedVersion: 2
-        x: 83
+        x: 79
         y: 179
         width: 26
         height: 35
@@ -157,7 +157,7 @@ TextureImporter:
       name: Monster2_Sprite_6
       rect:
         serializedVersion: 2
-        x: 147
+        x: 142
         y: 179
         width: 26
         height: 35
@@ -170,7 +170,7 @@ TextureImporter:
       name: Monster2_Sprite_7
       rect:
         serializedVersion: 2
-        x: 212
+        x: 206
         y: 180
         width: 26
         height: 35
@@ -183,7 +183,7 @@ TextureImporter:
       name: Monster2_Sprite_8
       rect:
         serializedVersion: 2
-        x: 275
+        x: 269
         y: 179
         width: 26
         height: 35
@@ -196,7 +196,7 @@ TextureImporter:
       name: Monster2_Sprite_9
       rect:
         serializedVersion: 2
-        x: 18
+        x: 12
         y: 115
         width: 28
         height: 36
@@ -209,7 +209,7 @@ TextureImporter:
       name: Monster2_Sprite_10
       rect:
         serializedVersion: 2
-        x: 83
+        x: 76
         y: 115
         width: 28
         height: 36
@@ -222,7 +222,7 @@ TextureImporter:
       name: Monster2_Sprite_11
       rect:
         serializedVersion: 2
-        x: 148
+        x: 139
         y: 115
         width: 28
         height: 36
@@ -235,7 +235,7 @@ TextureImporter:
       name: Monster2_Sprite_12
       rect:
         serializedVersion: 2
-        x: 212
+        x: 206
         y: 115
         width: 28
         height: 36
@@ -248,7 +248,7 @@ TextureImporter:
       name: Monster2_Sprite_13
       rect:
         serializedVersion: 2
-        x: 276
+        x: 269
         y: 115
         width: 28
         height: 36
@@ -261,7 +261,7 @@ TextureImporter:
       name: Monster2_Sprite_14
       rect:
         serializedVersion: 2
-        x: 338
+        x: 332
         y: 115
         width: 28
         height: 36
@@ -287,9 +287,9 @@ TextureImporter:
       name: Monster2_Sprite_16
       rect:
         serializedVersion: 2
-        x: 80
+        x: 75
         y: 51
-        width: 32
+        width: 30
         height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -300,9 +300,9 @@ TextureImporter:
       name: Monster2_Sprite_17
       rect:
         serializedVersion: 2
-        x: 141
-        y: 51
-        width: 33
+        x: 135
+        y: 50
+        width: 32
         height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -313,9 +313,9 @@ TextureImporter:
       name: Monster2_Sprite_18
       rect:
         serializedVersion: 2
-        x: 206
+        x: 200
         y: 51
-        width: 33
+        width: 32
         height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -326,9 +326,9 @@ TextureImporter:
       name: Monster2_Sprite_19
       rect:
         serializedVersion: 2
-        x: 270
+        x: 265
         y: 51
-        width: 33
+        width: 32
         height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -339,9 +339,9 @@ TextureImporter:
       name: Monster2_Sprite_20
       rect:
         serializedVersion: 2
-        x: 335
+        x: 331
         y: 52
-        width: 33
+        width: 32
         height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -352,9 +352,9 @@ TextureImporter:
       name: Monster2_Sprite_21
       rect:
         serializedVersion: 2
-        x: 398
-        y: 52
-        width: 33
+        x: 395
+        y: 53
+        width: 32
         height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
