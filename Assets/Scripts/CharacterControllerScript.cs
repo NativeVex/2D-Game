@@ -5,6 +5,10 @@ public class CharacterControllerScript : MonoBehaviour {
 
 	private Vector3 moveD = new Vector3 (0, 0, 0);
 
+	//text for dash
+	public GUIText dashText;
+	private int dashScore;
+
 	//sprite sorting order
 	public const string LAYER_NAME = "TopLayer";
 	public int sortingOrder = 0;
@@ -19,12 +23,16 @@ public class CharacterControllerScript : MonoBehaviour {
 	public CharacterController controller;
 
 	//dash
-	public float MaxDashTime = 0.1f;
-	public float dashSpeed = 5.0f;
+	private int dashCount = 5;
+	private float time = 0.0f;
+	public float MaxDashTime = 0.9f;
+	public float dashSpeed = 2000.0f;
 	public float dashStoppingSpeed = 0.01f;
 	private float currentDashTime;
 
 	void Start () {
+		dashScore = 0;
+		UpdateDashScore ();
 		sprite = GetComponent<SpriteRenderer>();
 		if (sprite)
 		{
@@ -35,14 +43,20 @@ public class CharacterControllerScript : MonoBehaviour {
 		controller = GetComponent<CharacterController>();
 		currentDashTime = MaxDashTime;
 	}
+
+	void UpdateDashScore(){
+		dashText.text = "Dashes left: " + dashScore;
+	}
 	
 	// Update is called once per frame
 	void Update () {
 		//dashing
+		time += Time.deltaTime;
 		print(lastDirection);
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
 			currentDashTime = 0.0f;
+			dashScore++;
 		}
 
 		if (currentDashTime < MaxDashTime)
@@ -103,6 +117,11 @@ public class CharacterControllerScript : MonoBehaviour {
 		controller.Move (moveDirection * Time.deltaTime);
 		playerPos = moveDirection;
 		print (playerPos);
+	}
+
+	void TimeCheck(){
+		
+		
 	}
 
 
