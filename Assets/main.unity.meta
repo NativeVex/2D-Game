@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 337cda47e36504d8593bfb8670cb0925
 timeCreated: 1484284290
@@ -6,3 +7,14 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+||||||| merged common ancestors
+=======
+fileFormatVersion: 2
+guid: ffbff44c2674d4e7db8e6886e621c7f9
+timeCreated: 1484284356
+licenseType: Free
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> 2b1067d95f58dcb58ce89a1e6730a9ac74db519c
