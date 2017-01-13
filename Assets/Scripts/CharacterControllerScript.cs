@@ -25,14 +25,14 @@ public class CharacterControllerScript : MonoBehaviour {
 	//dash
 	private int dashCount = 5;
 	private float time = 0.0f;
-	public float MaxDashTime = 0.9f;
-	public float dashSpeed = 2000.0f;
+	public float MaxDashTime = 0.1f;
+	public float dashSpeed = 3000.0f;
 	public float dashStoppingSpeed = 0.01f;
 	private float currentDashTime;
 
 	void Start () {
 		dashScore = 0;
-		UpdateDashScore ();
+		//UpdateDashScore ();
 		sprite = GetComponent<SpriteRenderer>();
 		if (sprite)
 		{
