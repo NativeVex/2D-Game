@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8d4d45030a5b6074b9585f76bbefa7e4
-timeCreated: 1484094861
+timeCreated: 1484601519
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,6 +61,13 @@ TextureImporter:
     21300108: Bat_Monster_54
     21300110: Bat_Monster_55
     21300112: Bat_Monster_56
+    21300114: Bat_Monster_57
+    21300116: Bat_Monster_58
+    21300118: Bat_Monster_59
+    21300120: Bat_Monster_60
+    21300122: Bat_Monster_61
+    21300124: Bat_Monster_62
+    21300126: Bat_Monster_63
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -843,6 +850,97 @@ TextureImporter:
         serializedVersion: 2
         x: 65
         y: 77
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Monster_57
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 61
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Monster_58
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 50
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Monster_59
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 18
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Monster_60
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 15
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Monster_61
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 14
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Monster_62
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 82
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Monster_63
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 61
         width: 30
         height: 16
       alignment: 0

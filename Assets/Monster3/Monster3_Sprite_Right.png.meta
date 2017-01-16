@@ -1,33 +1,33 @@
 fileFormatVersion: 2
-guid: 2933ae580fcc4f74abd63813ad0860f8
-timeCreated: 1484603355
+guid: 5c4499ec9bf48a844b8170b39132e94b
+timeCreated: 1484603679
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Monster3_Sprite_0
-    21300002: Monster3_Sprite_1
-    21300004: Monster3_Sprite_2
-    21300006: Monster3_Sprite_3
-    21300008: Monster3_Sprite_4
-    21300010: Monster3_Sprite_5
-    21300012: Monster3_Sprite_6
-    21300014: Monster3_Sprite_7
-    21300016: Monster3_Sprite_8
-    21300018: Monster3_Sprite_9
-    21300020: Monster3_Sprite_10
-    21300022: Monster3_Sprite_11
-    21300024: Monster3_Sprite_12
-    21300026: Monster3_Sprite_13
-    21300028: Monster3_Sprite_14
-    21300030: Monster3_Sprite_15
-    21300032: Monster3_Sprite_16
-    21300034: Monster3_Sprite_17
-    21300036: Monster3_Sprite_18
-    21300038: Monster3_Sprite_19
+    21300000: Monster3_Sprite_Right_0
+    21300002: Monster3_Sprite_Right_1
+    21300004: Monster3_Sprite_Right_2
+    21300006: Monster3_Sprite_Right_3
+    21300008: Monster3_Sprite_Right_4
+    21300010: Monster3_Sprite_Right_5
+    21300012: Monster3_Sprite_Right_6
+    21300014: Monster3_Sprite_Right_7
+    21300016: Monster3_Sprite_Right_8
+    21300018: Monster3_Sprite_Right_9
+    21300020: Monster3_Sprite_Right_10
+    21300022: Monster3_Sprite_Right_11
+    21300024: Monster3_Sprite_Right_12
+    21300026: Monster3_Sprite_Right_13
+    21300028: Monster3_Sprite_Right_14
+    21300030: Monster3_Sprite_Right_15
+    21300032: Monster3_Sprite_Right_16
+    21300034: Monster3_Sprite_Right_17
+    21300036: Monster3_Sprite_Right_18
+    21300038: Monster3_Sprite_Right_19
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -50,7 +50,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -73,23 +73,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monster3_Sprite_0
+      name: Monster3_Sprite_Right_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 134
-        width: 32
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Monster3_Sprite_1
-      rect:
-        serializedVersion: 2
-        x: 64
+        x: 425
         y: 133
         width: 32
         height: 53
@@ -99,10 +86,23 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_2
+      name: Monster3_Sprite_Right_1
       rect:
         serializedVersion: 2
-        x: 176
+        x: 374
+        y: 133
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Monster3_Sprite_Right_2
+      rect:
+        serializedVersion: 2
+        x: 264
         y: 133
         width: 30
         height: 52
@@ -112,10 +112,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_3
+      name: Monster3_Sprite_Right_3
       rect:
         serializedVersion: 2
-        x: 227
+        x: 214
         y: 133
         width: 30
         height: 52
@@ -125,10 +125,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_4
+      name: Monster3_Sprite_Right_4
       rect:
         serializedVersion: 2
-        x: 276
+        x: 164
         y: 133
         width: 30
         height: 52
@@ -138,75 +138,49 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_5
-      rect:
-        serializedVersion: 2
-        x: 326
-        y: 133
-        width: 30
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Monster3_Sprite_6
-      rect:
-        serializedVersion: 2
-        x: 376
-        y: 133
-        width: 30
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Monster3_Sprite_7
-      rect:
-        serializedVersion: 2
-        x: 426
-        y: 133
-        width: 30
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Monster3_Sprite_8
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 9
-        width: 30
-        height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Monster3_Sprite_9
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 9
-        width: 30
-        height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Monster3_Sprite_10
+      name: Monster3_Sprite_Right_5
       rect:
         serializedVersion: 2
         x: 114
+        y: 133
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Monster3_Sprite_Right_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 133
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Monster3_Sprite_Right_7
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 133
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Monster3_Sprite_Right_8
+      rect:
+        serializedVersion: 2
+        x: 426
         y: 9
         width: 30
         height: 56
@@ -216,36 +190,36 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_11
+      name: Monster3_Sprite_Right_9
       rect:
         serializedVersion: 2
-        x: 224
-        y: 7
-        width: 36
-        height: 52
+        x: 376
+        y: 9
+        width: 30
+        height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_12
-      rect:
-        serializedVersion: 2
-        x: 274
-        y: 7
-        width: 36
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Monster3_Sprite_13
+      name: Monster3_Sprite_Right_10
       rect:
         serializedVersion: 2
         x: 326
+        y: 9
+        width: 31
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Monster3_Sprite_Right_11
+      rect:
+        serializedVersion: 2
+        x: 210
         y: 7
         width: 36
         height: 52
@@ -255,10 +229,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_14
+      name: Monster3_Sprite_Right_12
       rect:
         serializedVersion: 2
-        x: 380
+        x: 160
         y: 7
         width: 36
         height: 52
@@ -268,10 +242,36 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_15
+      name: Monster3_Sprite_Right_13
       rect:
         serializedVersion: 2
-        x: 179
+        x: 108
+        y: 7
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Monster3_Sprite_Right_14
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 7
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Monster3_Sprite_Right_15
+      rect:
+        serializedVersion: 2
+        x: 255
         y: 68
         width: 36
         height: 52
@@ -281,10 +281,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_16
+      name: Monster3_Sprite_Right_16
       rect:
         serializedVersion: 2
-        x: 219
+        x: 215
         y: 68
         width: 36
         height: 52
@@ -294,10 +294,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_17
+      name: Monster3_Sprite_Right_17
       rect:
         serializedVersion: 2
-        x: 262
+        x: 172
         y: 68
         width: 36
         height: 52
@@ -307,10 +307,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_18
+      name: Monster3_Sprite_Right_18
       rect:
         serializedVersion: 2
-        x: 305
+        x: 129
         y: 68
         width: 36
         height: 52
@@ -320,10 +320,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Monster3_Sprite_19
+      name: Monster3_Sprite_Right_19
       rect:
         serializedVersion: 2
-        x: 349
+        x: 91
         y: 68
         width: 36
         height: 52
