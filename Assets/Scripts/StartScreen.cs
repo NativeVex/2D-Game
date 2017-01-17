@@ -1,16 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class StartScreen : MonoBehaviour {
-	
-	void Quit()
+    public AudioClip audio1;
+	public void Quit()
     {
+        AudioSource audio = GetComponent<AudioSource>();
+
+        audio.Play();
+        audio.clip = audio1;
+        audio.Play(); 
+       // print("Quit");
         Application.Quit();
     }
 
-    void Begin()
+    public void Begin()
     {
+        AudioSource audio = GetComponent<AudioSource>();
+
+        audio.Play();
+        audio.clip = audio1;
+        audio.Play(); 
+       // print("Begin");
         SceneManager.LoadScene("level 1");
     }
 }
