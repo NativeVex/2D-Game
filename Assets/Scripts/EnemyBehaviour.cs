@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemyBehaviour : MonoBehaviour {
-
+    
 	// Use this for initialization
 	void Start () {
 	
