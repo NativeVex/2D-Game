@@ -100,8 +100,8 @@ GameObject:
   - 4: {fileID: 530497217}
   - 95: {fileID: 530497216}
   - 212: {fileID: 530497215}
-  - 114: {fileID: 530497218}
   - 143: {fileID: 530497219}
+  - 114: {fileID: 530497218}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -166,7 +166,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 530497214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.69, y: 0, z: 0.54}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -181,18 +181,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 530497214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f466db0a2cfd4340b4926af252baf62, type: 3}
+  m_Script: {fileID: 11500000, guid: c7b0a77d449791e4caff8229a43a7098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashText: {fileID: 0}
-  sortingOrder: 0
-  speed: 5
-  playerPos: {x: 0, y: 0, z: 0}
-  lastDirection: 1
-  controller: {fileID: 530497219}
-  MaxDashTime: 1
-  dashSpeed: 1
-  dashStoppingSpeed: 0.1
+  walkSpeed: 1
+  runSpeed: 2
 --- !u!143 &530497219
 CharacterController:
   m_ObjectHideFlags: 0
@@ -376,7 +369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1163286206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +445,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1597764939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1597764941}
+  - 95: {fileID: 1597764940}
+  m_Layer: 0
+  m_Name: Attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1597764940
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597764939}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f7fbb46ab1f2974999c7cb8b0365f2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!4 &1597764941
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597764939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.069091745, y: 0.3770442, z: 0.7211211}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &1951912272
 GameObject:
   m_ObjectHideFlags: 0
