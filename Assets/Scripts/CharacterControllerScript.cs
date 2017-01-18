@@ -21,6 +21,8 @@ public class CharacterControllerScript : MonoBehaviour {
 	Animator anim;
 	private Vector3 moveDirection = Vector3.zero;
 	public CharacterController controller;
+   // public AnimationClip windRibbon;
+    //Animation anim2;
 
 	//dash
 	private int dashCount = 5;
@@ -106,6 +108,11 @@ public class CharacterControllerScript : MonoBehaviour {
 			anim.SetInteger ("Direction", 4);
 				lastDirection = 4;
 		} 
+    /*    if (Input.GetKeyDown("space"))
+        {
+            anim2 = GetComponent<Animation>();
+            anim2.AddClip(windRibbon, "windRibbon");
+        }*/
 		Move ();
 
 
