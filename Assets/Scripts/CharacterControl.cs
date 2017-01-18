@@ -34,37 +34,45 @@ public class CharacterControl : MonoBehaviour
         //define the animator attached to the player
         animator = this.GetComponent<Animator>();
         attackAnim = Attack.GetComponent<Animator>();
-        Attack = (GameObject)Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+        //Attack = (GameObject)Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
     }
 
     // FixedUpdate is used insead of Update to better handle the physics based jump
     void Update()
     {
         //Check for keyboard input
-        Attack.transform.position = gameObject.transform.position;
+        //Attack.transform.position = gameObject.transform.position;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (direction.Equals("up"))
             {
+				//TODO make this appear directly above the player. I think it does this already
                 //Attack.transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
+				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
                 print("up");
                 PlayerAttack(STATE_ATTACK);
             }
             else if (direction.Equals("down"))
             {
+				//TODO make this appear below the player. Definately doesn't do this already
                 //Attack.transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
+				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
                 print("down");
                 PlayerAttack(STATE_ATTACK);
             }
             else if (direction.Equals("left"))
             {
+				//TODO make this appear left
                 // Attack.transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
+				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
                 print("left");
                 PlayerAttack(STATE_ATTACK);
             }
             else if (direction.Equals("right"))
             {
+				//TODO i'm sure you can figure this one out.
                 // Attack.transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
                 print("right");
                 PlayerAttack(STATE_ATTACK);
             }
