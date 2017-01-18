@@ -5,15 +5,15 @@ using System.Collections;
 public class EnemyAnim : MonoBehaviour {
 //	[RequireComponent (typeof (Animator))]
 //	Animator anim;
-	NavMeshAgent agent;
+	NavMeshAgent Agent;
 
 	//private Vector3 velocity, smoothDeltaPosition = Vector2.zero;
 	private Vector3 A,B,D;
 	private Vector3 AD, BD;
 	void Update(){
-		agent = gameObject.GetComponent<NavMeshAgent>();
+		Agent = gameObject.GetComponent<NavMeshAgent>();
 		D = GameObject.Find("Camera").GetComponent<Camera>().transform.position;
-		B = agent.steeringTarget;
+		B = Agent.steeringTarget;
 		A = transform.position;
 		AD = D - A;
 		BD = D - B;
