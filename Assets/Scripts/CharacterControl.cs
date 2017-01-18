@@ -70,62 +70,62 @@ public class CharacterControl : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Left
         {
             transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
             changeState(STATE_WALKLEFT);
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow))   //Walk Left
         {
             transform.Translate(Vector3.left * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKLEFT);
         }
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.LeftArrow))  //Left Idle
         {
             changeState(STATE_LEFT_IDLE);
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Right
         {
             transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
             changeState(STATE_WALKRIGHT);
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))  //Walk Right
         {
             transform.Translate(Vector3.right * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKRIGHT);
         }
-        if (Input.GetKeyUp(KeyCode.RightArrow))
+        if (Input.GetKeyUp(KeyCode.RightArrow)) //Right Idle
         {
             changeState(STATE_RIGHT_IDLE);
         }
 
-        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Up
         {
             transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
             changeState(STATE_WALKUP);
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow))   //Walk Up
         {
             transform.Translate(Vector3.up * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKUP);
         }
-        if (Input.GetKeyUp(KeyCode.UpArrow))
+        if (Input.GetKeyUp(KeyCode.UpArrow))  //Up Idle
         {
             changeState(STATE_BACK_IDLE);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Down
         {
             transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
             changeState(STATE_WALKDOWN);
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow))  //Walk Down
         {
             transform.Translate(Vector3.down * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKDOWN);
         }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.DownArrow))  //Down Idle
         {
             changeState(STATE_FRONT_IDLE);
         }
@@ -136,9 +136,6 @@ public class CharacterControl : MonoBehaviour
         return attackAnim.GetCurrentAnimatorStateInfo(0).IsName(stateName);
     }
 
-    //--------------------------------------
-    // Change the players animation state
-    //--------------------------------------
     void PlayerAttack(int state)
     {
         if (_currentAnimationState == state)
@@ -156,6 +153,9 @@ public class CharacterControl : MonoBehaviour
         }
     }
 
+    //--------------------------------------
+    // Change the players animation state
+    //--------------------------------------
     void changeState(int state)
     {
 
