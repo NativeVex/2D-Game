@@ -729,6 +729,17 @@ MonoBehaviour:
   meshRendererFlag: {fileID: 36313741}
   chaseTarget: {fileID: 0}
   navMeshAgent: {fileID: 0}
+--- !u!114 &1211683672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1211683670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ecb523a3b4f4c329337082776e57b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1211683673 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010411481704, guid: 3c474e8e7fe5b5a44a6f5d804506d3e8,
