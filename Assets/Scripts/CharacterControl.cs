@@ -46,35 +46,27 @@ public class CharacterControl : MonoBehaviour
         {
             if (direction.Equals("up"))
             {
-				//TODO make this appear directly above the player. I think it does this already
-                //Attack.transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
-				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                print("up");
-                PlayerAttack(STATE_ATTACK);
+                //TODO make this appear directly above the player. I think it does this already
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
             }
             else if (direction.Equals("down"))
             {
-				//TODO make this appear below the player. Definately doesn't do this already
-                //Attack.transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
-				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                print("down");
-                PlayerAttack(STATE_ATTACK);
+                //TODO make this appear below the player. Definately doesn't do this already
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
             }
             else if (direction.Equals("left"))
             {
-				//TODO make this appear left
-                // Attack.transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
-				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                print("left");
-                PlayerAttack(STATE_ATTACK);
+                //TODO make this appear left
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
             }
             else if (direction.Equals("right"))
             {
-				//TODO i'm sure you can figure this one out.
-                // Attack.transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                print("right");
-                PlayerAttack(STATE_ATTACK);
+                //TODO i'm sure you can figure this one out.
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
             }
         }
 
@@ -139,12 +131,12 @@ public class CharacterControl : MonoBehaviour
         }
     }
 
-    bool AnimatorIsPlaying(string stateName)
+  /*  bool AnimatorIsPlaying(string stateName)
     {
         return attackAnim.GetCurrentAnimatorStateInfo(0).IsName(stateName);
-    }
+    } */
 
-    void PlayerAttack(int state)
+   /* void PlayerAttack(int state)
     {
         if (_currentAnimationState == state)
             return;
@@ -159,7 +151,7 @@ public class CharacterControl : MonoBehaviour
                 animator.SetInteger("State", STATE_ATTACK);
                 break;
         }
-    }
+    } */
 
     //--------------------------------------
     // Change the players animation state
