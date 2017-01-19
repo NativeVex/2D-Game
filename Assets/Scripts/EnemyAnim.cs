@@ -3,13 +3,12 @@ using System.Collections;
 [RequireComponent (typeof (NavMeshAgent))]
 
 public class EnemyAnim : MonoBehaviour {
-//	[RequireComponent (typeof (Animator))]
-//	Animator anim;
-	NavMeshAgent Agent;
-
-	//private Vector3 velocity, smoothDeltaPosition = Vector2.zero;
+	const int STATE_WALKUP = 1, STATE_WALKDOWN =0, STATE_WALKLEFT = 2, STATE_WALKRIGHT = 3;
 	private Vector3 A,B,D;
 	private Vector3 AD, BD;
+	NavMeshAgent Agent;
+
+
 	void Update(){
 		Agent = gameObject.GetComponent<NavMeshAgent>();
 		D = GameObject.Find("Camera").GetComponent<Camera>().transform.position;
