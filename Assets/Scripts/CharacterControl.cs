@@ -46,108 +46,97 @@ public class CharacterControl : MonoBehaviour
         {
             if (direction.Equals("up"))
             {
-				//TODO make this appear directly above the player. I think it does this already
-                //Attack.transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
-				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                print("up");
-                PlayerAttack(STATE_ATTACK);
+                //TODO make this appear directly above the player. I think it does this already
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
             }
             else if (direction.Equals("down"))
             {
-				//TODO make this appear below the player. Definately doesn't do this already
-                //Attack.transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
-				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                print("down");
-                PlayerAttack(STATE_ATTACK);
+                //TODO make this appear below the player. Definately doesn't do this already
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
             }
             else if (direction.Equals("left"))
             {
-				//TODO make this appear left
-                // Attack.transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
-				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                print("left");
-                PlayerAttack(STATE_ATTACK);
+                //TODO make this appear left
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
             }
             else if (direction.Equals("right"))
             {
-				//TODO i'm sure you can figure this one out.
-                // Attack.transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                print("right");
-                PlayerAttack(STATE_ATTACK);
+                //TODO i'm sure you can figure this one out.
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
             }
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Left
         {
             transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
             changeState(STATE_WALKLEFT);
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow))   //Walk Left
         {
             transform.Translate(Vector3.left * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKLEFT);
         }
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.LeftArrow))  //Left Idle
         {
             changeState(STATE_LEFT_IDLE);
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Right
         {
             transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
             changeState(STATE_WALKRIGHT);
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))  //Walk Right
         {
             transform.Translate(Vector3.right * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKRIGHT);
         }
-        if (Input.GetKeyUp(KeyCode.RightArrow))
+        if (Input.GetKeyUp(KeyCode.RightArrow)) //Right Idle
         {
             changeState(STATE_RIGHT_IDLE);
         }
 
-        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Up
         {
             transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
             changeState(STATE_WALKUP);
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow))   //Walk Up
         {
             transform.Translate(Vector3.up * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKUP);
         }
-        if (Input.GetKeyUp(KeyCode.UpArrow))
+        if (Input.GetKeyUp(KeyCode.UpArrow))  //Up Idle
         {
             changeState(STATE_BACK_IDLE);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Down
         {
             transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
             changeState(STATE_WALKDOWN);
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow))  //Walk Down
         {
             transform.Translate(Vector3.down * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKDOWN);
         }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.DownArrow))  //Down Idle
         {
             changeState(STATE_FRONT_IDLE);
         }
     }
 
-    bool AnimatorIsPlaying(string stateName)
+  /*  bool AnimatorIsPlaying(string stateName)
     {
         return attackAnim.GetCurrentAnimatorStateInfo(0).IsName(stateName);
-    }
+    } */
 
-    //--------------------------------------
-    // Change the players animation state
-    //--------------------------------------
-    void PlayerAttack(int state)
+   /* void PlayerAttack(int state)
     {
         if (_currentAnimationState == state)
             return;
@@ -162,8 +151,11 @@ public class CharacterControl : MonoBehaviour
                 animator.SetInteger("State", STATE_ATTACK);
                 break;
         }
-    }
+    } */
 
+    //--------------------------------------
+    // Change the players animation state
+    //--------------------------------------
     void changeState(int state)
     {
 
