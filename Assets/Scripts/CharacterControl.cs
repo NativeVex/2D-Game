@@ -21,7 +21,11 @@ public class CharacterControl : MonoBehaviour
     const int STATE_WALKLEFT = 5;
     const int STATE_WALKRIGHT = 7;
 
+    const int STATE_ATTACK_IDLE = 8;
+    const int STATE_ATTACK = 9;
+
     int _currentAnimationState = STATE_FRONT_IDLE;
+    int _currentAttack = STATE_ATTACK_IDLE;
     string direction = "front";
 
     // Use this for initialization
@@ -30,17 +34,40 @@ public class CharacterControl : MonoBehaviour
         //define the animator attached to the player
         animator = this.GetComponent<Animator>();
         attackAnim = Attack.GetComponent<Animator>();
+        //Attack = (GameObject)Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
     }
 
     // FixedUpdate is used insead of Update to better handle the physics based jump
     void Update()
     {
         //Check for keyboard input
+        //Attack.transform.position = gameObject.transform.position;
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject AttackClone = Attack;
-            AttackClone.gameObject.GetComponent<AttackScript>().direction = direction;
-            AttackClone = (GameObject)Instantiate(Attack, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.Euler(0, 0, 0));
+            if (direction.Equals("up"))
+            {
+                //TODO make this appear directly above the player. I think it does this already
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
+            }
+            else if (direction.Equals("down"))
+            {
+                //TODO make this appear below the player. Definately doesn't do this already
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
+            }
+            else if (direction.Equals("left"))
+            {
+                //TODO make this appear left
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
+            }
+            else if (direction.Equals("right"))
+            {
+                //TODO i'm sure you can figure this one out.
+                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+                Attack.transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+            }
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Left
@@ -75,12 +102,12 @@ public class CharacterControl : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Up
         {
-            transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
+            transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
             changeState(STATE_WALKUP);
         }
         else if (Input.GetKey(KeyCode.UpArrow))   //Walk Up
         {
-            transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime);
+            transform.Translate(Vector3.up * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKUP);
         }
         if (Input.GetKeyUp(KeyCode.UpArrow))  //Up Idle
@@ -90,12 +117,12 @@ public class CharacterControl : MonoBehaviour
 
         if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Down
         {
-            transform.Translate(Vector3.back * runSpeed * Time.deltaTime);
+            transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
             changeState(STATE_WALKDOWN);
         }
         else if (Input.GetKey(KeyCode.DownArrow))  //Walk Down
         {
-            transform.Translate(Vector3.back * walkSpeed * Time.deltaTime);
+            transform.Translate(Vector3.down * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKDOWN);
         }
         if (Input.GetKeyUp(KeyCode.DownArrow))  //Down Idle
@@ -103,6 +130,28 @@ public class CharacterControl : MonoBehaviour
             changeState(STATE_FRONT_IDLE);
         }
     }
+
+  /*  bool AnimatorIsPlaying(string stateName)
+    {
+        return attackAnim.GetCurrentAnimatorStateInfo(0).IsName(stateName);
+    } */
+
+   /* void PlayerAttack(int state)
+    {
+        if (_currentAnimationState == state)
+            return;
+        switch (state)
+        {
+
+            case STATE_ATTACK_IDLE:
+                animator.SetInteger("State", STATE_ATTACK_IDLE);
+                break;
+
+            case STATE_ATTACK:
+                animator.SetInteger("State", STATE_ATTACK);
+                break;
+        }
+    } */
 
     //--------------------------------------
     // Change the players animation state
