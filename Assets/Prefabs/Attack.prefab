@@ -22,6 +22,7 @@ GameObject:
   - 212: {fileID: 212000010707527870}
   - 95: {fileID: 95000013963890802}
   - 114: {fileID: 114000013756303568}
+  - 114: {fileID: 114000012068833810}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -59,6 +60,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000012068833810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012730991936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f6ebaba0775d54297de10043f394db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 
 --- !u!114 &114000013756303568
 MonoBehaviour:
   m_ObjectHideFlags: 1
