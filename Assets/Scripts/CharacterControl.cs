@@ -10,7 +10,26 @@ public class CharacterControl : MonoBehaviour
     Animator animator;
     Animator attackAnim;
 
+    public const int DIR_FRONT = 0, DIR_BACK = 1, DIR_LEFT = 2, DIR_RIGHT = 3;
+    public bool ATTACK = false, DEAD = false, WALK = false;
 
+<<<<<<< HEAD
+    int _currentAnimationState = DIR_FRONT;
+    bool _currentWalk = false;
+||||||| merged common ancestors
+    //animation states - the values in the animator conditions
+    const int STATE_FRONT_IDLE = 0;
+    const int STATE_BACK_IDLE = 2;
+    const int STATE_LEFT_IDLE = 4;
+    const int STATE_RIGHT_IDLE = 6;
+    const int STATE_WALKDOWN = 1;
+    const int STATE_WALKUP = 3;
+    const int STATE_WALKLEFT = 5;
+    const int STATE_WALKRIGHT = 7;
+
+    int _currentAnimationState = STATE_FRONT_IDLE;
+    string direction = "front";
+=======
     //animation states - the values in the animator conditions
     const int STATE_FRONT_IDLE = 0;
     const int STATE_BACK_IDLE = 2;
@@ -27,6 +46,7 @@ public class CharacterControl : MonoBehaviour
     int _currentAnimationState = STATE_FRONT_IDLE;
     int _currentAttack = STATE_ATTACK_IDLE;
     string direction = "front";
+>>>>>>> e42dc4986c078452a050bbba920a8f24b499c9e6
 
     // Use this for initialization
     void Start()
@@ -44,6 +64,18 @@ public class CharacterControl : MonoBehaviour
         //Attack.transform.position = gameObject.transform.position;
         if (Input.GetKeyDown(KeyCode.Space))
         {
+<<<<<<< HEAD
+            GameObject AttackClone = Attack;
+            ATTACK = true;
+            AttackClone.gameObject.GetComponent<AttackScript>().direction = _currentAnimationState;
+            animator.SetBool("Attack", ATTACK);
+            AttackClone = (GameObject)Instantiate(Attack, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.Euler(0, 0, 0));
+            ATTACK = AttackClone.gameObject.GetComponent<AttackScript>().ATTACK;
+||||||| merged common ancestors
+            GameObject AttackClone = Attack;
+            AttackClone.gameObject.GetComponent<AttackScript>().direction = direction;
+            AttackClone = (GameObject)Instantiate(Attack, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.Euler(0, 0, 0));
+=======
             if (direction.Equals("up"))
             {
                 //TODO make this appear directly above the player. I think it does this already
@@ -70,69 +102,122 @@ public class CharacterControl : MonoBehaviour
                 //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
                 Attack.transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
             }
+>>>>>>> e42dc4986c078452a050bbba920a8f24b499c9e6
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Left
         {
             transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
-            changeState(STATE_WALKLEFT);
+            WALK = true;
+            changeState(DIR_LEFT, WALK);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))   //Walk Left
         {
             transform.Translate(Vector3.left * walkSpeed * Time.deltaTime);
-            changeState(STATE_WALKLEFT);
+            WALK = true;
+            changeState(DIR_LEFT, WALK);
         }
         if (Input.GetKeyUp(KeyCode.LeftArrow))  //Left Idle
         {
-            changeState(STATE_LEFT_IDLE);
+            WALK = false;
+            changeState(DIR_LEFT, WALK);
         }
 
         if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Right
         {
             transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-            changeState(STATE_WALKRIGHT);
+            WALK = true;
+            changeState(DIR_RIGHT, WALK);
         }
         else if (Input.GetKey(KeyCode.RightArrow))  //Walk Right
         {
             transform.Translate(Vector3.right * walkSpeed * Time.deltaTime);
-            changeState(STATE_WALKRIGHT);
+            WALK = true;
+            changeState(DIR_RIGHT, WALK);
         }
         if (Input.GetKeyUp(KeyCode.RightArrow)) //Right Idle
         {
-            changeState(STATE_RIGHT_IDLE);
+            WALK = false;
+            changeState(DIR_RIGHT, WALK);
         }
 
         if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Up
         {
+<<<<<<< HEAD
+            transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
+            WALK = true;
+            changeState(DIR_BACK, WALK);
+||||||| merged common ancestors
+            transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
+            changeState(STATE_WALKUP);
+=======
             transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
             changeState(STATE_WALKUP);
+>>>>>>> e42dc4986c078452a050bbba920a8f24b499c9e6
         }
         else if (Input.GetKey(KeyCode.UpArrow))   //Walk Up
         {
+<<<<<<< HEAD
+            transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime);
+            WALK = true;
+            changeState(DIR_BACK, WALK);
+||||||| merged common ancestors
+            transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime);
+            changeState(STATE_WALKUP);
+=======
             transform.Translate(Vector3.up * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKUP);
+>>>>>>> e42dc4986c078452a050bbba920a8f24b499c9e6
         }
         if (Input.GetKeyUp(KeyCode.UpArrow))  //Up Idle
         {
-            changeState(STATE_BACK_IDLE);
+            WALK = false;
+            changeState(DIR_BACK, WALK);
         }
 
         if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Down
         {
+<<<<<<< HEAD
+            transform.Translate(Vector3.back * runSpeed * Time.deltaTime);
+            WALK = true;
+            changeState(DIR_FRONT, WALK);
+||||||| merged common ancestors
+            transform.Translate(Vector3.back * runSpeed * Time.deltaTime);
+            changeState(STATE_WALKDOWN);
+=======
             transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
             changeState(STATE_WALKDOWN);
+>>>>>>> e42dc4986c078452a050bbba920a8f24b499c9e6
         }
         else if (Input.GetKey(KeyCode.DownArrow))  //Walk Down
         {
+<<<<<<< HEAD
+            transform.Translate(Vector3.back * walkSpeed * Time.deltaTime);
+            WALK = true;
+            changeState(DIR_FRONT,WALK);
+||||||| merged common ancestors
+            transform.Translate(Vector3.back * walkSpeed * Time.deltaTime);
+            changeState(STATE_WALKDOWN);
+=======
             transform.Translate(Vector3.down * walkSpeed * Time.deltaTime);
             changeState(STATE_WALKDOWN);
+>>>>>>> e42dc4986c078452a050bbba920a8f24b499c9e6
         }
         if (Input.GetKeyUp(KeyCode.DownArrow))  //Down Idle
         {
-            changeState(STATE_FRONT_IDLE);
+            WALK = false; 
+            changeState(DIR_FRONT, WALK);
         }
     }
 
+<<<<<<< HEAD
+    void changeState(int state, bool walk)
+||||||| merged common ancestors
+    //--------------------------------------
+    // Change the players animation state
+    //--------------------------------------
+    void changeState(int state)
+=======
   /*  bool AnimatorIsPlaying(string stateName)
     {
         return attackAnim.GetCurrentAnimatorStateInfo(0).IsName(stateName);
@@ -159,54 +244,15 @@ public class CharacterControl : MonoBehaviour
     // Change the players animation state
     //--------------------------------------
     void changeState(int state)
+>>>>>>> e42dc4986c078452a050bbba920a8f24b499c9e6
     {
-
-        if (_currentAnimationState == state)
-            return;
-
-        switch (state)
+        if (state != _currentAnimationState)
         {
-
-            case STATE_WALKUP:
-                animator.SetInteger("State", STATE_WALKUP);
-                direction = "up";
-                break;
-
-            case STATE_WALKDOWN:
-                animator.SetInteger("State", STATE_WALKDOWN);
-                direction = "down";
-                break;
-
-            case STATE_WALKLEFT:
-                animator.SetInteger("State", STATE_WALKLEFT);
-                direction = "left";
-                break;
-
-            case STATE_WALKRIGHT:
-                animator.SetInteger("State", STATE_WALKRIGHT);
-                direction = "right";
-                break;
-
-            case STATE_FRONT_IDLE:
-                animator.SetInteger("State", STATE_FRONT_IDLE);
-                direction = "down";
-                break;
-            case STATE_BACK_IDLE:
-                animator.SetInteger("State", STATE_BACK_IDLE);
-                direction = "up";
-                break;
-            case STATE_LEFT_IDLE:
-                animator.SetInteger("State", STATE_LEFT_IDLE);
-                direction = "left";
-                break;
-            case STATE_RIGHT_IDLE:
-                animator.SetInteger("State", STATE_RIGHT_IDLE);
-                direction = "right";
-                break;
-
+            animator.SetInteger("Dir", state);
         }
-
-        _currentAnimationState = state;
+        if (walk != _currentWalk)
+        {
+            animator.SetBool("Walk", walk);
+        }
     }
-
 }

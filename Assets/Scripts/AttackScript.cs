@@ -7,7 +7,10 @@ public class AttackScript : MonoBehaviour {
 	public string[] tags;
 
     Animator anim;
-	GameObject Parent;
+
+    public bool ATTACK = false;
+    public const int DIR_FRONT = 0, DIR_BACK = 1, DIR_LEFT = 2, DIR_RIGHT = 3;
+    public int direction;
 
     void Start () {
 		Parent = this.gameObject.transform.parent.gameObject;
@@ -16,52 +19,30 @@ public class AttackScript : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Destroy"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName(""))//change to foreach tags
         {
-			Destroy(gameObject.transform.parent.gameObject);
+            Destroy(gameObject);
         }
-//        else
-//        {
-//            if (gameObject.tag.Equals("Player"))
-//            {
-//                if (direction.Equals("up"))
-//                {
-//                    gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
-//                }
-//                else if (direction.Equals("down"))
-//                {
-//                    gameObject.transform.Translate(Vector3.back * speed * Time.deltaTime);
-//                }
-//                else if (direction.Equals("left"))
-//                {
-//                    gameObject.transform.Translate(Vector3.left * speed * Time.deltaTime);
-//                }
-//                else if (direction.Equals("right"))
-//                {
-//                    gameObject.transform.Translate(Vector3.right * speed * Time.deltaTime);
-//                }
-//            }
-//            else if (gameObject.tag.Equals("Enemy"))
-//            {
-//                if (direction.Equals("up"))
-//                {
-//                    
-//                    gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
-//                }
-//                else if (direction.Equals("down"))
-//                {
-//                    gameObject.transform.Translate(Vector3.back * speed * Time.deltaTime);
-//                }
-//                else if (direction.Equals("left"))
-//                {
-//                    gameObject.transform.Translate(Vector3.left * speed * Time.deltaTime);
-//                }
-//                else if (direction.Equals("right"))
-//                {
-//                    gameObject.transform.Translate(Vector3.right * speed * Time.deltaTime);
-//                }
-//            }
-//        }
+        else
+        {
+            anim.SetInteger("Dir", direction);
+            if (direction == DIR_FRONT)
+            {
+                gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            }
+            else if (direction == DIR_BACK)
+            {
+                gameObject.transform.Translate(Vector3.back * speed * Time.deltaTime);
+            }
+            else if (direction == DIR_LEFT)
+            {
+                gameObject.transform.Translate(Vector3.left * speed * Time.deltaTime);
+            }
+            else if (direction == DIR_RIGHT)
+            {
+                gameObject.transform.Translate(Vector3.right * speed * Time.deltaTime);
+            }
+        }
     }
 
     void OnCollisionEnter(Collider col)
