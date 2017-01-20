@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor.Animations;
+//bbusing UnityEngine.AI;
 [RequireComponent (typeof (NavMeshAgent))]
 
 public class EnemyAnim : MonoBehaviour {
 	//Debug
 	public string dir;
+
 
 
 	NavMeshAgent Agent;
@@ -14,18 +16,19 @@ public class EnemyAnim : MonoBehaviour {
 	private Vector3 A,B,D;
 	private Vector3 AD, BD;
 
+
 	//How many these are used will depend on the enemy
 	public const int DIR_FRONT = 0, DIR_BACK = 1, DIR_LEFT =3, DIR_RIGHT =2;
 	public bool ATTACK = false, DED = false;
 
-	Animator anim;
+    Animator anim;
 
-	void Start()
-	{
-		anim = this.GetComponent<Animator>();
-	}
+    void Start()
+    {
+        anim = this.GetComponent<Animator>();
+    }
 
-	void Update(){
+    void Update(){
 		Agent = gameObject.GetComponent<NavMeshAgent>();
 		D = GameObject.Find("Camera").GetComponent<Camera>().transform.position;
 		B = Agent.steeringTarget;
@@ -38,11 +41,10 @@ public class EnemyAnim : MonoBehaviour {
 			dir = "right";
 			anim.SetInteger("Dir",DIR_RIGHT);
 		} else {
+
 			//heading left
 			dir = "left";
 			anim.SetInteger("Dir",DIR_LEFT);
 		}
 	}
-
-
 }
