@@ -4,8 +4,10 @@ using UnityEditor.Animations;
 [RequireComponent (typeof (NavMeshAgent))]
 
 public class EnemyAnim : MonoBehaviour {
-	//    [RequireComponent (typeof (Animator))]
-	//    Animator anim;
+	//Debug
+	public string dir;
+
+
 	NavMeshAgent Agent;
 
 	//private Vector3 velocity, smoothDeltaPosition = Vector2.zero;
@@ -13,25 +15,8 @@ public class EnemyAnim : MonoBehaviour {
 	private Vector3 AD, BD;
 
 	//How many these are used will depend on the enemy
-	public const int STATE_FRONT_IDLE = 0;
-	public const int STATE_FRONT_MOVE = 1;
-	public const int STATE_FRONT_ATTACK = 2;
-	public const int STATE_FRONT_DEATH = 3;
-	public const int STATE_BACK_IDLE = 4;
-	public const int STATE_BACK_MOVE = 5;
-	public const int STATE_BACK_ATTACK = 6;
-	public const int STATE_BACK_DEATH = 7;
-	public const int STATE_LEFT_IDLE = 8;
-	public const int STATE_LEFT_MOVE = 9;
-	public const int STATE_LEFT_ATTACK = 10;
-	public const int STATE_LEFT_DEATH = 11;
-	public const int STATE_RIGHT_IDLE = 12;
-	public const int STATE_RIGHT_MOVE = 13;
-	public const int STATE_RIGHT_ATTACK = 14;
-	public const int STATE_RIGHT_DEATH = 15;
-
-	public string direction;
-	int _currentAnimationState;
+	public const int DIR_FRONT = 0, DIR_BACK = 1, DIR_LEFT =3, DIR_RIGHT =2;
+	public bool ATTACK = false, DED = false;
 
 	Animator anim;
 
@@ -50,76 +35,14 @@ public class EnemyAnim : MonoBehaviour {
 		Vector3 viewport = Vector3.Cross (AD, BD);
 		if (viewport.y >0) {
 			//heading right
-			changeState(STATE_RIGHT_MOVE);
-			direction = "right";
+			dir = "right";
+			anim.SetInteger("Dir",DIR_RIGHT);
 		} else {
 			//heading left
-			changeState(STATE_LEFT_MOVE);
-			direction = "left";
+			dir = "left";
+			anim.SetInteger("Dir",DIR_LEFT);
 		}
 	}
 
-	void changeState(int state)
-	{
-		if (_currentAnimationState == state){
-			return;
-		}
 
-		switch (state)
-		{
-		case STATE_FRONT_IDLE:
-			anim.SetInteger("State", STATE_FRONT_IDLE);
-			break;
-		case STATE_FRONT_MOVE:
-			anim.SetInteger("State", STATE_FRONT_MOVE);
-			break;
-		case STATE_FRONT_ATTACK:
-			anim.SetInteger("State", STATE_FRONT_ATTACK);
-			break;
-		case STATE_FRONT_DEATH:
-			anim.SetInteger("State", STATE_FRONT_DEATH);
-			break;
-		case STATE_BACK_IDLE:
-			anim.SetInteger("State", STATE_BACK_IDLE);
-			break;
-		case STATE_BACK_MOVE:
-			anim.SetInteger("State", STATE_BACK_MOVE);
-			break;
-		case STATE_BACK_ATTACK:
-			anim.SetInteger("State", STATE_BACK_ATTACK);
-			break;
-		case STATE_BACK_DEATH:
-			anim.SetInteger("State", STATE_BACK_DEATH);
-			break;
-		case STATE_LEFT_IDLE:
-			anim.SetInteger("State", STATE_LEFT_IDLE);
-			break;
-		case STATE_LEFT_MOVE:
-			anim.SetInteger("State", STATE_LEFT_MOVE);
-			break;
-		case STATE_LEFT_ATTACK:
-			anim.SetInteger("State", STATE_LEFT_ATTACK);
-			break;
-		case STATE_LEFT_DEATH:
-			anim.SetInteger("State", STATE_LEFT_DEATH);
-			break;
-		case STATE_RIGHT_IDLE:
-			anim.SetInteger("State", STATE_RIGHT_IDLE);
-			break;
-		case STATE_RIGHT_MOVE:
-			anim.SetInteger("State", STATE_RIGHT_MOVE);
-			break;
-		case STATE_RIGHT_ATTACK:
-			anim.SetInteger("State", STATE_RIGHT_ATTACK);
-			break;
-		case STATE_RIGHT_DEATH:
-			anim.SetInteger("State", STATE_RIGHT_DEATH);
-			break;
-		}
-	}
-
-	private string getDirection()
-	{
-		return direction;
-	}
 }

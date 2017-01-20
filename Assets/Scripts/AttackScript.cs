@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class AttackScript : MonoBehaviour {
-    public string direction;
-    float speed = 1f;
+	public Vector3 direction;
+    public float speed = 1f;
+	public string[] tags;
+
     Animator anim;
 	void Start () {
         anim = this.gameObject.GetComponent<Animator>();
@@ -37,9 +39,11 @@ public class AttackScript : MonoBehaviour {
 
     void OnCollisionEnter(Collider col)
     {
+		foreach(string temp in tags){
         if (col.gameObject.tag.Equals("Enemy"))
         {
             Destroy(gameObject);
         }
+		}
     }
 }
