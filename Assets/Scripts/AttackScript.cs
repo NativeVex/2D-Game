@@ -2,16 +2,15 @@
 using System.Collections;
 
 public class AttackScript : MonoBehaviour {
-    public string direction;
     float speed = 1f;
     Animator anim;
 
-    public const int STATE_FRONT_ATTACK = 2;
-    public const int STATE_BACK_ATTACK = 6;
-    public const int STATE_LEFT_ATTACK = 10;
-    public const int STATE_RIGHT_ATTACK = 14;
+    public bool ATTACK = false;
+    public const int DIR_FRONT = 0, DIR_BACK = 1, DIR_LEFT = 2, DIR_RIGHT = 3;
+    public int direction;
 
     void Start () {
+        ATTACK = false;
         anim = this.gameObject.GetComponent<Animator>();
 	}
 	
@@ -22,44 +21,22 @@ public class AttackScript : MonoBehaviour {
         }
         else
         {
-            if (gameObject.tag.Equals("Player"))
+            anim.SetInteger("Dir", direction);
+            if (direction == DIR_FRONT)
             {
-                if (direction.Equals("up"))
-                {
-                    gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                }
-                else if (direction.Equals("down"))
-                {
-                    gameObject.transform.Translate(Vector3.back * speed * Time.deltaTime);
-                }
-                else if (direction.Equals("left"))
-                {
-                    gameObject.transform.Translate(Vector3.left * speed * Time.deltaTime);
-                }
-                else if (direction.Equals("right"))
-                {
-                    gameObject.transform.Translate(Vector3.right * speed * Time.deltaTime);
-                }
+                gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
             }
-            else if (gameObject.tag.Equals("Enemy"))
+            else if (direction == DIR_BACK)
             {
-                if (direction.Equals("up"))
-                {
-                    
-                    gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                }
-                else if (direction.Equals("down"))
-                {
-                    gameObject.transform.Translate(Vector3.back * speed * Time.deltaTime);
-                }
-                else if (direction.Equals("left"))
-                {
-                    gameObject.transform.Translate(Vector3.left * speed * Time.deltaTime);
-                }
-                else if (direction.Equals("right"))
-                {
-                    gameObject.transform.Translate(Vector3.right * speed * Time.deltaTime);
-                }
+                gameObject.transform.Translate(Vector3.back * speed * Time.deltaTime);
+            }
+            else if (direction == DIR_LEFT)
+            {
+                gameObject.transform.Translate(Vector3.left * speed * Time.deltaTime);
+            }
+            else if (direction == DIR_RIGHT)
+            {
+                gameObject.transform.Translate(Vector3.right * speed * Time.deltaTime);
             }
         }
     }
