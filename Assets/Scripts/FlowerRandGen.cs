@@ -6,6 +6,10 @@ public class FlowerRandGen : MonoBehaviour {
 
     public GameObject[] plants;
     public GameObject[] trees;
+    public float Xmin;
+    public float Xmax;
+    public float Zmin;
+    public float Zmax;
     public int amount;
     public int treeAmount;
     public ArrayList treeLocations = new ArrayList(); 
@@ -16,13 +20,13 @@ public class FlowerRandGen : MonoBehaviour {
         {
             int randObj = (int)(Random.Range(0, plants.Length));
             GameObject obj = plants[randObj];
-            Instantiate(obj, new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f)), Quaternion.Euler(0, 0, 0));
+            Instantiate(obj, new Vector3(Random.Range(Xmin, Xmax), 0, Random.Range(Zmin, Zmax)), Quaternion.Euler(0, 0, 0));
         }
         for (int i = 0; i < treeAmount; i++)
         {
             int randObj = (int)(Random.Range(0, trees.Length));
             GameObject obj = trees[randObj];
-            Vector3 location = new Vector3 (Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f));
+            Vector3 location = new Vector3 (Random.Range(Xmin, Xmax), 0, Random.Range(Zmin, Zmax));
             bool alreadyUsed = false;
             while (alreadyUsed)
             {
