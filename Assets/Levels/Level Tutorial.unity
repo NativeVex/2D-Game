@@ -236,7 +236,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 143014484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.23, y: 0.763, z: -3.97}
+  m_LocalPosition: {x: 2.23, y: -1.87, z: -3.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -283,7 +283,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010411481704, guid: 3c474e8e7fe5b5a44a6f5d804506d3e8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.763
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010411481704, guid: 3c474e8e7fe5b5a44a6f5d804506d3e8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -600,7 +600,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 780739335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.13, y: 0.763, z: -3.88}
+  m_LocalPosition: {x: -2.13, y: -1.87, z: -3.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -628,7 +628,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 837345643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3, y: 0.763, z: 3.07}
+  m_LocalPosition: {x: 1.3, y: -1.87, z: 3.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -719,6 +719,7 @@ MonoBehaviour:
   searchingTurnSpeed: 100
   searchingDuration: 4
   sightRange: 20
+  walkSpeed: 1
   wayPoints:
   - {fileID: 146883048}
   - {fileID: 780739336}
@@ -740,6 +741,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ecb523a3b4f4c329337082776e57b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dir: 
+  ATTACK: 0
+  DED: 0
 --- !u!4 &1211683673 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010411481704, guid: 3c474e8e7fe5b5a44a6f5d804506d3e8,
