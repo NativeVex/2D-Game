@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class AttackScript : MonoBehaviour {
@@ -13,6 +13,15 @@ public class AttackScript : MonoBehaviour {
 	}
     void OnCollisionEnter(Collider col)
     {
+        if (col.gameObject.tag.Equals("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+    }
+}
+
+	void OnCollisionEnter(Collider col)
+	{
 		foreach(string temp in tags){
 			if (col.gameObject.tag.Equals(temp))
 	        {
@@ -20,5 +29,6 @@ public class AttackScript : MonoBehaviour {
 				Destroy(Parent);
 	        }
 		}
-    }
+	} */
 }
+

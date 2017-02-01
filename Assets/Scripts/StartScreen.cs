@@ -24,6 +24,6 @@ public class StartScreen : MonoBehaviour {
         audio.clip = audio1;
         audio.Play(); 
        // print("Begin");
-        SceneManager.LoadScene("Level Tutorial");
+        SceneManager.LoadScene("level 1 ");
     }
 }

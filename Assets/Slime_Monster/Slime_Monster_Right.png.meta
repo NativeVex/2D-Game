@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cea6dec5e31e72d419baef38beb35aa9
-timeCreated: 1484149745
+timeCreated: 1485403231
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -517,9 +517,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 297
-        y: 544
+        y: 539
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,9 +530,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 265
-        y: 544
+        y: 539
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,9 +543,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 233
-        y: 544
+        y: 539
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -556,9 +556,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 201
-        y: 544
+        y: 539
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -569,9 +569,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 169
-        y: 544
+        y: 539
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -582,9 +582,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 137
-        y: 544
+        y: 539
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -595,9 +595,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 105
-        y: 544
+        y: 539
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -608,9 +608,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 73
-        y: 544
+        y: 539
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -621,9 +621,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 544
+        y: 539
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,9 +634,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 544
+        y: 539
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -646,10 +646,10 @@ TextureImporter:
       name: Slime_Monster_Right_30
       rect:
         serializedVersion: 2
-        x: 298
-        y: 512
-        width: 21
-        height: 15
+        x: 289
+        y: 507
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -659,10 +659,10 @@ TextureImporter:
       name: Slime_Monster_Right_31
       rect:
         serializedVersion: 2
-        x: 266
-        y: 512
-        width: 21
-        height: 15
+        x: 257
+        y: 507
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,10 +672,10 @@ TextureImporter:
       name: Slime_Monster_Right_32
       rect:
         serializedVersion: 2
-        x: 234
-        y: 512
-        width: 21
-        height: 15
+        x: 225
+        y: 507
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -685,10 +685,10 @@ TextureImporter:
       name: Slime_Monster_Right_33
       rect:
         serializedVersion: 2
-        x: 202
-        y: 512
-        width: 21
-        height: 15
+        x: 193
+        y: 507
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -698,10 +698,10 @@ TextureImporter:
       name: Slime_Monster_Right_34
       rect:
         serializedVersion: 2
-        x: 170
-        y: 512
-        width: 21
-        height: 15
+        x: 161
+        y: 507
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +711,10 @@ TextureImporter:
       name: Slime_Monster_Right_35
       rect:
         serializedVersion: 2
-        x: 138
-        y: 512
-        width: 21
-        height: 15
+        x: 129
+        y: 507
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,10 +724,10 @@ TextureImporter:
       name: Slime_Monster_Right_36
       rect:
         serializedVersion: 2
-        x: 106
-        y: 512
-        width: 21
-        height: 15
+        x: 97
+        y: 507
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -737,10 +737,10 @@ TextureImporter:
       name: Slime_Monster_Right_37
       rect:
         serializedVersion: 2
-        x: 74
-        y: 512
-        width: 21
-        height: 15
+        x: 65
+        y: 507
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -750,10 +750,10 @@ TextureImporter:
       name: Slime_Monster_Right_38
       rect:
         serializedVersion: 2
-        x: 42
-        y: 512
-        width: 21
-        height: 15
+        x: 33
+        y: 507
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -763,10 +763,10 @@ TextureImporter:
       name: Slime_Monster_Right_39
       rect:
         serializedVersion: 2
-        x: 10
-        y: 512
-        width: 21
-        height: 15
+        x: 1
+        y: 507
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1167,9 +1167,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 297
-        y: 384
+        y: 379
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1180,9 +1180,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 265
-        y: 384
+        y: 379
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1193,9 +1193,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 233
-        y: 384
+        y: 379
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1206,9 +1206,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 201
-        y: 384
+        y: 379
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1219,9 +1219,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 169
-        y: 384
+        y: 379
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1232,9 +1232,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 137
-        y: 384
+        y: 379
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1245,9 +1245,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 105
-        y: 384
+        y: 379
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1258,9 +1258,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 73
-        y: 384
+        y: 379
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1271,9 +1271,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 384
+        y: 379
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1284,9 +1284,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 384
+        y: 379
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1296,10 +1296,10 @@ TextureImporter:
       name: Slime_Monster_Right_80
       rect:
         serializedVersion: 2
-        x: 298
-        y: 352
-        width: 21
-        height: 15
+        x: 289
+        y: 347
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1309,10 +1309,10 @@ TextureImporter:
       name: Slime_Monster_Right_81
       rect:
         serializedVersion: 2
-        x: 266
-        y: 352
-        width: 21
-        height: 15
+        x: 257
+        y: 347
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1322,10 +1322,10 @@ TextureImporter:
       name: Slime_Monster_Right_82
       rect:
         serializedVersion: 2
-        x: 234
-        y: 352
-        width: 21
-        height: 15
+        x: 225
+        y: 347
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1335,10 +1335,10 @@ TextureImporter:
       name: Slime_Monster_Right_83
       rect:
         serializedVersion: 2
-        x: 202
-        y: 352
-        width: 21
-        height: 15
+        x: 193
+        y: 347
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1348,10 +1348,10 @@ TextureImporter:
       name: Slime_Monster_Right_84
       rect:
         serializedVersion: 2
-        x: 170
-        y: 352
-        width: 21
-        height: 15
+        x: 161
+        y: 347
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1361,10 +1361,10 @@ TextureImporter:
       name: Slime_Monster_Right_85
       rect:
         serializedVersion: 2
-        x: 138
-        y: 352
-        width: 21
-        height: 15
+        x: 129
+        y: 347
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1374,10 +1374,10 @@ TextureImporter:
       name: Slime_Monster_Right_86
       rect:
         serializedVersion: 2
-        x: 106
-        y: 352
-        width: 21
-        height: 15
+        x: 97
+        y: 347
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1387,10 +1387,10 @@ TextureImporter:
       name: Slime_Monster_Right_87
       rect:
         serializedVersion: 2
-        x: 74
-        y: 352
-        width: 21
-        height: 15
+        x: 65
+        y: 347
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1400,10 +1400,10 @@ TextureImporter:
       name: Slime_Monster_Right_88
       rect:
         serializedVersion: 2
-        x: 42
-        y: 352
-        width: 21
-        height: 15
+        x: 33
+        y: 347
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1413,10 +1413,10 @@ TextureImporter:
       name: Slime_Monster_Right_89
       rect:
         serializedVersion: 2
-        x: 10
-        y: 352
-        width: 21
-        height: 15
+        x: 1
+        y: 347
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1817,9 +1817,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 297
-        y: 224
+        y: 219
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1830,9 +1830,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 265
-        y: 224
+        y: 219
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1843,9 +1843,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 233
-        y: 224
+        y: 219
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1856,9 +1856,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 201
-        y: 224
+        y: 219
         width: 14
-        height: 16
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1869,9 +1869,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 169
-        y: 224
+        y: 219
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1882,9 +1882,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 137
-        y: 224
+        y: 219
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1895,9 +1895,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 105
-        y: 224
+        y: 219
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1908,9 +1908,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 73
-        y: 224
+        y: 219
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1921,9 +1921,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 224
+        y: 219
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1946,10 +1946,10 @@ TextureImporter:
       name: Slime_Monster_Right_130
       rect:
         serializedVersion: 2
-        x: 297
-        y: 192
-        width: 21
-        height: 15
+        x: 287
+        y: 187
+        width: 31
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1959,10 +1959,10 @@ TextureImporter:
       name: Slime_Monster_Right_131
       rect:
         serializedVersion: 2
-        x: 266
-        y: 192
-        width: 21
-        height: 15
+        x: 257
+        y: 187
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1972,10 +1972,10 @@ TextureImporter:
       name: Slime_Monster_Right_132
       rect:
         serializedVersion: 2
-        x: 234
-        y: 192
-        width: 21
-        height: 15
+        x: 225
+        y: 187
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1985,10 +1985,10 @@ TextureImporter:
       name: Slime_Monster_Right_133
       rect:
         serializedVersion: 2
-        x: 202
-        y: 192
-        width: 21
-        height: 15
+        x: 193
+        y: 187
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1998,10 +1998,10 @@ TextureImporter:
       name: Slime_Monster_Right_134
       rect:
         serializedVersion: 2
-        x: 170
-        y: 192
-        width: 21
-        height: 15
+        x: 161
+        y: 187
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2011,10 +2011,10 @@ TextureImporter:
       name: Slime_Monster_Right_135
       rect:
         serializedVersion: 2
-        x: 138
-        y: 192
-        width: 21
-        height: 15
+        x: 129
+        y: 187
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2024,10 +2024,10 @@ TextureImporter:
       name: Slime_Monster_Right_136
       rect:
         serializedVersion: 2
-        x: 106
-        y: 192
-        width: 21
-        height: 15
+        x: 97
+        y: 187
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2037,10 +2037,10 @@ TextureImporter:
       name: Slime_Monster_Right_137
       rect:
         serializedVersion: 2
-        x: 74
-        y: 192
-        width: 21
-        height: 15
+        x: 65
+        y: 187
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2050,10 +2050,10 @@ TextureImporter:
       name: Slime_Monster_Right_138
       rect:
         serializedVersion: 2
-        x: 42
-        y: 192
-        width: 21
-        height: 15
+        x: 33
+        y: 187
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2063,10 +2063,10 @@ TextureImporter:
       name: Slime_Monster_Right_139
       rect:
         serializedVersion: 2
-        x: 10
-        y: 192
-        width: 21
-        height: 15
+        x: 1
+        y: 187
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2467,9 +2467,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 297
-        y: 64
+        y: 59
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2480,9 +2480,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 265
-        y: 64
+        y: 59
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2493,9 +2493,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 233
-        y: 64
+        y: 59
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2506,9 +2506,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 201
-        y: 64
+        y: 59
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2519,9 +2519,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 169
-        y: 64
+        y: 59
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2532,9 +2532,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 137
-        y: 64
+        y: 59
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2545,9 +2545,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 105
-        y: 64
+        y: 59
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2558,9 +2558,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 73
-        y: 64
+        y: 59
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2571,9 +2571,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 64
+        y: 59
         width: 14
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2584,9 +2584,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 64
+        y: 59
         width: 15
-        height: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2596,10 +2596,10 @@ TextureImporter:
       name: Slime_Monster_Right_180
       rect:
         serializedVersion: 2
-        x: 298
-        y: 32
-        width: 21
-        height: 15
+        x: 289
+        y: 27
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2609,10 +2609,10 @@ TextureImporter:
       name: Slime_Monster_Right_181
       rect:
         serializedVersion: 2
-        x: 266
-        y: 32
-        width: 21
-        height: 15
+        x: 257
+        y: 27
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2622,10 +2622,10 @@ TextureImporter:
       name: Slime_Monster_Right_182
       rect:
         serializedVersion: 2
-        x: 234
-        y: 32
-        width: 21
-        height: 15
+        x: 225
+        y: 27
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2635,10 +2635,10 @@ TextureImporter:
       name: Slime_Monster_Right_183
       rect:
         serializedVersion: 2
-        x: 202
-        y: 32
-        width: 21
-        height: 15
+        x: 193
+        y: 27
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2648,10 +2648,10 @@ TextureImporter:
       name: Slime_Monster_Right_184
       rect:
         serializedVersion: 2
-        x: 170
-        y: 32
-        width: 21
-        height: 15
+        x: 161
+        y: 27
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2661,10 +2661,10 @@ TextureImporter:
       name: Slime_Monster_Right_185
       rect:
         serializedVersion: 2
-        x: 138
-        y: 32
-        width: 21
-        height: 15
+        x: 129
+        y: 27
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2674,10 +2674,10 @@ TextureImporter:
       name: Slime_Monster_Right_186
       rect:
         serializedVersion: 2
-        x: 106
-        y: 32
-        width: 21
-        height: 15
+        x: 97
+        y: 27
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2687,10 +2687,10 @@ TextureImporter:
       name: Slime_Monster_Right_187
       rect:
         serializedVersion: 2
-        x: 74
-        y: 32
-        width: 21
-        height: 15
+        x: 65
+        y: 27
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2700,10 +2700,10 @@ TextureImporter:
       name: Slime_Monster_Right_188
       rect:
         serializedVersion: 2
-        x: 42
-        y: 32
-        width: 21
-        height: 15
+        x: 33
+        y: 27
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2713,10 +2713,10 @@ TextureImporter:
       name: Slime_Monster_Right_189
       rect:
         serializedVersion: 2
-        x: 10
-        y: 32
-        width: 21
-        height: 15
+        x: 1
+        y: 27
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

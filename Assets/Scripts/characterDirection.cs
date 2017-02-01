@@ -34,7 +34,7 @@ public class characterDirection: MonoBehaviour
 	{
 		//define the animator attached to the player
 		animator = this.GetComponent<Animator>();
-		attackAnim = Attack.GetComponent<Animator>();
+	//	attackAnim = Attack.GetComponent<Animator>();
 		//Attack = (GameObject)Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
 	}
 
@@ -49,13 +49,13 @@ public class characterDirection: MonoBehaviour
 			{
 				//TODO make this appear directly above the player. I think it does this already
 				//Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-				Attack.transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
+				Attack.transform.Translate(Vector3.back * runSpeed * Time.deltaTime);
 			}
 			else if (direction.Equals("down"))
 			{
 				//TODO make this appear below the player. Definately doesn't do this already
 				//Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-				Attack.transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
+				Attack.transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
 			}
 			else if (direction.Equals("left"))
 			{
@@ -66,7 +66,7 @@ public class characterDirection: MonoBehaviour
 			else if (direction.Equals("right"))
 			{
 				//TODO i'm sure you can figure this one out.
-				//Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+				Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
 				Attack.transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
 			}
 		}
@@ -208,5 +208,14 @@ public class characterDirection: MonoBehaviour
 
 		_currentAnimationState = state;
 	}
+
+    void OnCollisionEnter(Collider col)
+    {
+        if (col.tag.Equals("Terrain"))
+        {
+            Vector3 currentPos = new Vector3 (gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+            gameObject.transform.position = currentPos;
+        }
+    }
 
 }

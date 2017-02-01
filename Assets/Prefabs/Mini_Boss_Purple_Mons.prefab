@@ -1,3 +1,10 @@
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+=======
 version https://git-lfs.github.com/spec/v1
 oid sha256:a77ac430c1d88757ecb1ac2efc11c4145ef41670c553218bbea1b363e2d74dc1
 size 2589
+>>>>>>> df12e0adbbd2e84b5cf7477c3c917dbd025c184d

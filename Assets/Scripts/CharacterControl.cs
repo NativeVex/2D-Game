@@ -6,10 +6,11 @@ public class CharacterControl : MonoBehaviour
 
     public float walkSpeed = 1; // player left right walk speed
     public float runSpeed = 2;
-    public GameObject Attack; 
     Animator animator;
     Animator attackAnim;
 
+    public const int DIR_FRONT = 0, DIR_BACK = 1, DIR_LEFT = 2, DIR_RIGHT = 3;
+    public bool ATTACK = false, DEAD = false, WALK = false;
 
     //animation states - the values in the animator conditions
     const int DIR_FRONT = 0, DIR_BACK = 1, DIR_RIGHT = 2, DIR_LEFT =3;
@@ -190,25 +191,15 @@ public class CharacterControl : MonoBehaviour
 //        }
 //    }
 
-  /*  bool AnimatorIsPlaying(string stateName)
-    {
-        return attackAnim.GetCurrentAnimatorStateInfo(0).IsName(stateName);
-    } */
+    }
 
-   /* void PlayerAttack(int state)
-    {
-        if (_currentAnimationState == state)
-            return;
-        switch (state)
+
+    void changeState(int state, bool walk)
+
+        transform.Translate(Vector3.back * walkSpeed * Time.deltaTime);
+        if (state != _currentAnimationState)
         {
-
-            case STATE_ATTACK_IDLE:
-                animator.SetInteger("State", STATE_ATTACK_IDLE);
-                break;
-
-            case STATE_ATTACK:
-                animator.SetInteger("State", STATE_ATTACK);
-                break;
+            animator.SetInteger("Dir", state);
         }
     } */
 
