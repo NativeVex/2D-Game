@@ -49,8 +49,10 @@ public class LevelManager : MonoBehaviour {
         }
 	}
 
-    void OnCollisionEnter(Collider col)
+    void EnemyCount()
     {
-
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("Enemy");
+        monstersLeft = gos.Length;
     }
 }

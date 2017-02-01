@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
+     /*   if (Input.GetKeyDown(KeyCode.Space))
         {
             Attack.transform.position = gameObject.transform.position;
             attackAnim.SetBool("Attack", true);
@@ -30,6 +30,6 @@ public class PlayerAttack : MonoBehaviour {
             {
                 Attack.transform.Translate(Vector3.right * 50 * Time.deltaTime);
             }
-        }
+        }*/
     }
 }

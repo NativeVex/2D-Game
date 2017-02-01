@@ -116,4 +116,5 @@ public class PlayerControl : MonoBehaviour {
         animator.SetBool("Dead", DEAD);
         animator.SetBool("Attack", ATTACK);
     }
+
 }
