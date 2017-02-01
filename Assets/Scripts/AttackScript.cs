@@ -11,17 +11,8 @@ public class AttackScript : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
-    void OnCollisionEnter(Collider col)
-    {
-        if (col.gameObject.tag.Equals("Enemy"))
-        {
-            Destroy(gameObject);
-        }
-    }
-}
 
-	void OnCollisionEnter(Collider col)
-	{
+	void OnCollisionEnter(Collider col)	{
 		foreach(string temp in tags){
 			if (col.gameObject.tag.Equals(temp))
 	        {
@@ -29,6 +20,6 @@ public class AttackScript : MonoBehaviour {
 				Destroy(Parent);
 	        }
 		}
-	} */
+	} 
 }
 

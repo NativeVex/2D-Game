@@ -8,10 +8,7 @@ public class CharacterControl : MonoBehaviour
     public float runSpeed = 2;
     Animator animator;
     Animator attackAnim;
-
-    public const int DIR_FRONT = 0, DIR_BACK = 1, DIR_LEFT = 2, DIR_RIGHT = 3;
-    public bool ATTACK = false, DEAD = false, WALK = false;
-
+	public GameObject Attack;
     //animation states - the values in the animator conditions
     const int DIR_FRONT = 0, DIR_BACK = 1, DIR_RIGHT = 2, DIR_LEFT =3;
 	int dir;
@@ -194,67 +191,5 @@ public class CharacterControl : MonoBehaviour
     }
 
 
-    void changeState(int state, bool walk)
+   
 
-        transform.Translate(Vector3.back * walkSpeed * Time.deltaTime);
-        if (state != _currentAnimationState)
-        {
-            animator.SetInteger("Dir", state);
-        }
-    } */
-
-    //--------------------------------------
-    // Change the players animation state
-    //--------------------------------------
-//    void changeState(int state)
-//    {
-//
-//        if (_currentAnimationState == state)
-//            return;
-//
-//        switch (state)
-//        {
-//
-//            case STATE_WALKUP:
-//                animator.SetInteger("State", STATE_WALKUP);
-//                direction = "up";
-//                break;
-//
-//            case STATE_WALKDOWN:
-//                animator.SetInteger("State", STATE_WALKDOWN);
-//                direction = "down";
-//                break;
-//
-//            case STATE_WALKLEFT:
-//                animator.SetInteger("State", STATE_WALKLEFT);
-//                direction = "left";
-//                break;
-//
-//            case STATE_WALKRIGHT:
-//                animator.SetInteger("State", STATE_WALKRIGHT);
-//                direction = "right";
-//                break;
-//
-//            case STATE_FRONT_IDLE:
-//                animator.SetInteger("State", STATE_FRONT_IDLE);
-//                direction = "down";
-//                break;
-//            case STATE_BACK_IDLE:
-//                animator.SetInteger("State", STATE_BACK_IDLE);
-//                direction = "up";
-//                break;
-//            case STATE_LEFT_IDLE:
-//                animator.SetInteger("State", STATE_LEFT_IDLE);
-//                direction = "left";
-//                break;
-//            case STATE_RIGHT_IDLE:
-//                animator.SetInteger("State", STATE_RIGHT_IDLE);
-//                direction = "right";
-//                break;
-//
-//        }
-//
-//        _currentAnimationState = state;
-//    }
-
-}
