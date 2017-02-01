@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 1000011382315270, guid: c5b28e330cba544af9479368581db2ef, type: 2}
+  - {fileID: 0}
   dim: 5
   scale: 2
   grassSpeedLimit: 5
@@ -741,7 +741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ecb523a3b4f4c329337082776e57b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: 
   ATTACK: 0
   DED: 0
 --- !u!4 &1211683673 stripped

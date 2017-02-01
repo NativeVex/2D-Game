@@ -12,126 +12,183 @@ public class CharacterControl : MonoBehaviour
 
 
     //animation states - the values in the animator conditions
-    const int STATE_FRONT_IDLE = 0;
-    const int STATE_BACK_IDLE = 2;
-    const int STATE_LEFT_IDLE = 4;
-    const int STATE_RIGHT_IDLE = 6;
-    const int STATE_WALKDOWN = 1;
-    const int STATE_WALKUP = 3;
-    const int STATE_WALKLEFT = 5;
-    const int STATE_WALKRIGHT = 7;
+    const int DIR_FRONT = 0, DIR_BACK = 1, DIR_RIGHT = 2, DIR_LEFT =3;
+	int dir;
+	bool walking, run, attack, ded = false; //write to ded only when dead
 
-    const int STATE_ATTACK_IDLE = 8;
-    const int STATE_ATTACK = 9;
-
-    int _currentAnimationState = STATE_FRONT_IDLE;
-    int _currentAttack = STATE_ATTACK_IDLE;
-    string direction = "front";
+	void attackBundle(Vector3 dir, float magnitude, GameObject AttackPrefab, string[] tags){
+		GameObject VisualAttack = (GameObject)Instantiate (AttackPrefab,gameObject.transform.position,Quaternion.identity);
+		//Debug.Log ("childcount = "+VisualAttack.transform.childCount);
+		Vector3 velocity = VisualAttack.GetComponent<Rigidbody>().velocity;
+		velocity = dir * magnitude;
+	}
 
     // Use this for initialization
     void Start()
     {
         //define the animator attached to the player
-        animator = this.GetComponent<Animator>();
+		animator = gameObject.transform.GetComponentInChildren<Animator>();
         attackAnim = Attack.GetComponent<Animator>();
-        //Attack = (GameObject)Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
     }
 
     // FixedUpdate is used insead of Update to better handle the physics based jump
-    void Update()
-    {
-        //Check for keyboard input
-        //Attack.transform.position = gameObject.transform.position;
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (direction.Equals("up"))
-            {
-                //TODO make this appear directly above the player. I think it does this already
-				GameObject AttackRef = (GameObject)Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-				AttackRef.GetComponentsInChildren<AttackScript> ().direction = new Vector3 (AttackRef.transform.position.x, AttackRef.transform.position.y + 1);
+    void Update(){
+		//is dead?
+		if (gameObject.GetComponent<HP> ().health <= 0) {
+			ded = true;
+			//WaitUntil (animator.IsInTransition); //if looping is a transition?
+			Debug.Log ("bleh i'm dead");
+		}
 
-                //Attack.transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
-            }
-            else if (direction.Equals("down"))
-            {
-                //TODO make this appear below the player. Definately doesn't do this already
-                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                Attack.transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
-            }
-            else if (direction.Equals("left"))
-            {
-                //TODO make this appear left
-                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                Attack.transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
-            }
-            else if (direction.Equals("right"))
-            {
-                //TODO i'm sure you can figure this one out.
-                //Instantiate(Attack, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                Attack.transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-            }
-        }
+		//is running?
+		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift)) {
+			run = true;
+		}
+		//Attack section, piggybacks off of animation states for attack dir
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			//Quaternion right = Quaternion.FromToRotation (Vector3.forward, Vector3.right);
+			Quaternion left = Quaternion.FromToRotation (Vector3.forward, Vector3.left);
+			Quaternion full = Quaternion.FromToRotation (Vector3.forward, Vector3.back);
+			switch (dir) {
+			case 0:
+				attackBundle (Vector3.forward, 5, Attack, new string[] {
+					"AI",
+					"Player"
+				});
+				break;
+			case 1:
+				attackBundle (Vector3.back, 5, Attack, new string[] {
+					"AI",
+					"Player"
+				});
+				break;
+			case 2:
+				attackBundle (Vector3.right, 5, Attack, new string[] {
+					"AI",
+					"Player"
+				});
+				break;
+			case 3:
+				attackBundle (Vector3.left, 5, Attack, new string[] {
+					"AI",
+					"Player"
+				});
+				break;
+			}
+			attack = true;
+		}
 
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Left
-        {
-            transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
-            changeState(STATE_WALKLEFT);
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow))   //Walk Left
-        {
-            transform.Translate(Vector3.left * walkSpeed * Time.deltaTime);
-            changeState(STATE_WALKLEFT);
-        }
-        if (Input.GetKeyUp(KeyCode.LeftArrow))  //Left Idle
-        {
-            changeState(STATE_LEFT_IDLE);
-        }
+		//direction section
+		if (Input.GetKey (KeyCode.W)) {
+			walking = true;
+			dir = DIR_FRONT;
+			if (run) {
+				transform.Translate (Vector3.forward * runSpeed * Time.deltaTime);
+			} else {
+				transform.Translate (Vector3.forward * walkSpeed * Time.deltaTime);
+			}
+		} else if (Input.GetKey (KeyCode.A)) {
+			walking = true;
+			dir = DIR_LEFT;
+			if (run) {
+				transform.Translate (Vector3.left * runSpeed * Time.deltaTime);
+			} else {
+				transform.Translate (Vector3.left * walkSpeed * Time.deltaTime);
+			}
+		} else if (Input.GetKey (KeyCode.S)) {
+			walking = true;
+			dir = DIR_BACK;
+			if (run) {
+				transform.Translate (Vector3.back * runSpeed * Time.deltaTime);
+			} else {
+				transform.Translate (Vector3.back * walkSpeed * Time.deltaTime);
+			}
+		} else if (Input.GetKey (KeyCode.D)) {
+			walking = true;
+			dir = DIR_RIGHT;
+			if (run) {
+				transform.Translate (Vector3.right * runSpeed * Time.deltaTime);
+			} else {
+				transform.Translate (Vector3.right * walkSpeed * Time.deltaTime);
+			}
+		} else {
+			walking = false;
+		}
+		animator.SetInteger ("Dir", dir); //it's Dir and not dir cause i'm retarded and not about to reconfigure the entire web
+		animator.SetBool ("walking", walking);
+		animator.SetBool ("run", run);
+		animator.SetBool ("ded", ded);
+	}
 
-        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Right
-        {
-            transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-            changeState(STATE_WALKRIGHT);
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))  //Walk Right
-        {
-            transform.Translate(Vector3.right * walkSpeed * Time.deltaTime);
-            changeState(STATE_WALKRIGHT);
-        }
-        if (Input.GetKeyUp(KeyCode.RightArrow)) //Right Idle
-        {
-            changeState(STATE_RIGHT_IDLE);
-        }
 
-        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Up
-        {
-            transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
-            changeState(STATE_WALKUP);
-        }
-        else if (Input.GetKey(KeyCode.UpArrow))   //Walk Up
-        {
-            transform.Translate(Vector3.up * walkSpeed * Time.deltaTime);
-            changeState(STATE_WALKUP);
-        }
-        if (Input.GetKeyUp(KeyCode.UpArrow))  //Up Idle
-        {
-            changeState(STATE_BACK_IDLE);
-        }
 
-        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Down
-        {
-            transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
-            changeState(STATE_WALKDOWN);
-        }
-        else if (Input.GetKey(KeyCode.DownArrow))  //Walk Down
-        {
-            transform.Translate(Vector3.down * walkSpeed * Time.deltaTime);
-            changeState(STATE_WALKDOWN);
-        }
-        if (Input.GetKeyUp(KeyCode.DownArrow))  //Down Idle
-        {
-            changeState(STATE_FRONT_IDLE);
-        }
-    }
+
+
+//        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Left
+//        {
+//            transform.Translate(Vector3.left * runSpeed * Time.deltaTime);
+//			dir = DIR_LEFT;
+//			run = true;
+//			attack = false;
+//        }
+//        else if (Input.GetKey(KeyCode.LeftArrow))   //Walk Left
+//        {
+//            transform.Translate(Vector3.left * walkSpeed * Time.deltaTime);
+//			dir = DIR_LEFT;
+//			run = false;
+//			ded = false;
+//			attack = false;
+//        }
+//        if (Input.GetKeyUp(KeyCode.LeftArrow))  //Left Idle
+//        {
+//            changeState(STATE_LEFT_IDLE);
+//        }
+//
+//        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Right
+//        {
+//            transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+//            changeState(STATE_WALKRIGHT);
+//        }
+//        else if (Input.GetKey(KeyCode.RightArrow))  //Walk Right
+//        {
+//            transform.Translate(Vector3.right * walkSpeed * Time.deltaTime);
+//            changeState(STATE_WALKRIGHT);
+//        }
+//        if (Input.GetKeyUp(KeyCode.RightArrow)) //Right Idle
+//        {
+//            changeState(STATE_RIGHT_IDLE);
+//        }
+//
+//        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Up
+//        {
+//            transform.Translate(Vector3.up * runSpeed * Time.deltaTime);
+//            changeState(STATE_WALKUP);
+//        }
+//        else if (Input.GetKey(KeyCode.UpArrow))   //Walk Up
+//        {
+//            transform.Translate(Vector3.up * walkSpeed * Time.deltaTime);
+//            changeState(STATE_WALKUP);
+//        }
+//        if (Input.GetKeyUp(KeyCode.UpArrow))  //Up Idle
+//        {
+//            changeState(STATE_BACK_IDLE);
+//        }
+//
+//        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftShift)) //Run Down
+//        {
+//            transform.Translate(Vector3.down * runSpeed * Time.deltaTime);
+//            changeState(STATE_WALKDOWN);
+//        }
+//        else if (Input.GetKey(KeyCode.DownArrow))  //Walk Down
+//        {
+//            transform.Translate(Vector3.down * walkSpeed * Time.deltaTime);
+//            changeState(STATE_WALKDOWN);
+//        }
+//        if (Input.GetKeyUp(KeyCode.DownArrow))  //Down Idle
+//        {
+//            changeState(STATE_FRONT_IDLE);
+//        }
+//    }
 
   /*  bool AnimatorIsPlaying(string stateName)
     {
@@ -158,55 +215,55 @@ public class CharacterControl : MonoBehaviour
     //--------------------------------------
     // Change the players animation state
     //--------------------------------------
-    void changeState(int state)
-    {
-
-        if (_currentAnimationState == state)
-            return;
-
-        switch (state)
-        {
-
-            case STATE_WALKUP:
-                animator.SetInteger("State", STATE_WALKUP);
-                direction = "up";
-                break;
-
-            case STATE_WALKDOWN:
-                animator.SetInteger("State", STATE_WALKDOWN);
-                direction = "down";
-                break;
-
-            case STATE_WALKLEFT:
-                animator.SetInteger("State", STATE_WALKLEFT);
-                direction = "left";
-                break;
-
-            case STATE_WALKRIGHT:
-                animator.SetInteger("State", STATE_WALKRIGHT);
-                direction = "right";
-                break;
-
-            case STATE_FRONT_IDLE:
-                animator.SetInteger("State", STATE_FRONT_IDLE);
-                direction = "down";
-                break;
-            case STATE_BACK_IDLE:
-                animator.SetInteger("State", STATE_BACK_IDLE);
-                direction = "up";
-                break;
-            case STATE_LEFT_IDLE:
-                animator.SetInteger("State", STATE_LEFT_IDLE);
-                direction = "left";
-                break;
-            case STATE_RIGHT_IDLE:
-                animator.SetInteger("State", STATE_RIGHT_IDLE);
-                direction = "right";
-                break;
-
-        }
-
-        _currentAnimationState = state;
-    }
+//    void changeState(int state)
+//    {
+//
+//        if (_currentAnimationState == state)
+//            return;
+//
+//        switch (state)
+//        {
+//
+//            case STATE_WALKUP:
+//                animator.SetInteger("State", STATE_WALKUP);
+//                direction = "up";
+//                break;
+//
+//            case STATE_WALKDOWN:
+//                animator.SetInteger("State", STATE_WALKDOWN);
+//                direction = "down";
+//                break;
+//
+//            case STATE_WALKLEFT:
+//                animator.SetInteger("State", STATE_WALKLEFT);
+//                direction = "left";
+//                break;
+//
+//            case STATE_WALKRIGHT:
+//                animator.SetInteger("State", STATE_WALKRIGHT);
+//                direction = "right";
+//                break;
+//
+//            case STATE_FRONT_IDLE:
+//                animator.SetInteger("State", STATE_FRONT_IDLE);
+//                direction = "down";
+//                break;
+//            case STATE_BACK_IDLE:
+//                animator.SetInteger("State", STATE_BACK_IDLE);
+//                direction = "up";
+//                break;
+//            case STATE_LEFT_IDLE:
+//                animator.SetInteger("State", STATE_LEFT_IDLE);
+//                direction = "left";
+//                break;
+//            case STATE_RIGHT_IDLE:
+//                animator.SetInteger("State", STATE_RIGHT_IDLE);
+//                direction = "right";
+//                break;
+//
+//        }
+//
+//        _currentAnimationState = state;
+//    }
 
 }

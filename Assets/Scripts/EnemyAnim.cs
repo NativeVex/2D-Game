@@ -6,7 +6,7 @@ using UnityEditor.Animations;
 
 public class EnemyAnim : MonoBehaviour {
 	//Debug
-	public string dir;
+	//public string dir;
 
 
 
@@ -38,12 +38,12 @@ public class EnemyAnim : MonoBehaviour {
 		Vector3 viewport = Vector3.Cross (AD, BD);
 		if (viewport.y >0) {
 			//heading right
-			dir = "right";
+			//dir = "right";
 			anim.SetInteger("Dir",DIR_RIGHT);
 		} else {
 
 			//heading left
-			dir = "left";
+			//dir = "left";
 			anim.SetInteger("Dir",DIR_LEFT);
 		}
 	}
