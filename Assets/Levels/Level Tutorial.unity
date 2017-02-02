@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 0}
+  - {fileID: 1000011382315270, guid: c5b28e330cba544af9479368581db2ef, type: 2}
   dim: 5
   scale: 2
   grassSpeedLimit: 5
