@@ -102,6 +102,8 @@ MonoBehaviour:
   dmg: 5
   AttackScript: {fileID: 1000011169063264, guid: 11bb84f54544b4901bea432b92ff70fe,
     type: 2}
+  Player: {fileID: 1000010700393054, guid: 750984c592e2d224a8ab32e37e4644bd, type: 2}
+  dir: 0
 --- !u!212 &212000011520389380
 SpriteRenderer:
   m_ObjectHideFlags: 1

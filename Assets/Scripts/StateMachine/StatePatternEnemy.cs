@@ -24,7 +24,7 @@ public class StatePatternEnemy : MonoBehaviour
 		chaseState = new ChaseState (this);
 		alertState = new AlertState (this);
 		patrolState = new PatrolState (this);
-
+        
 		navMeshAgent = GetComponent<NavMeshAgent> ();
 
 	}

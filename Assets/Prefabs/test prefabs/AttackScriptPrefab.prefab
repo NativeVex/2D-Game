@@ -55,6 +55,8 @@ MonoBehaviour:
   tags: []
   dmg: 5
   Parent: {fileID: 0}
+  Player: {fileID: 0}
+  dir: 0
 --- !u!135 &135000010325329230
 SphereCollider:
   m_ObjectHideFlags: 1
