@@ -7,11 +7,13 @@ public class AttackScript : MonoBehaviour {
 	public GameObject Parent;
     private float speed;
     private int direction;
+    public string AttackObject;
   //  public int dir;
 
     void Start()
     {
-        direction = GetDirection();
+        speed = GameObject.Find(AttackObject).GetComponent<CharacterControl>().runSpeed;
+        direction = GameObject.Find(AttackObject).GetComponent<CharacterControl>().dir;
     }
 	void Update () {
 		if (Parent.GetComponent<Animator>().GetCurrentAnimatorStateInfo (0).IsName ("Destroy")) {
@@ -23,12 +25,6 @@ public class AttackScript : MonoBehaviour {
             Move();
         }
 	}
-
-    int GetDirection()
-    {
-        speed = GameObject.Find("playerTrolley").GetComponent<CharacterControl>().runSpeed;
-        return GameObject.Find("playerTrolley").GetComponent<CharacterControl>().dir;
-    }
 
     void Move()
     {

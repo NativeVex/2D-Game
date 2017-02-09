@@ -39,13 +39,14 @@ public class LevelManager : MonoBehaviour {
             monsterLocations.Add(location);
             obj.transform.localScale = new Vector3(scale, scale, scale);
             Instantiate(obj, location, Quaternion.Euler(angle, 0, 0));
+            obj.gameObject.name = Monsters[randObj].name;
         }
     }
 	
 	// Update is called once per frame
 	void Update () {
         EnemyCount();
-        print (monstersLeft);
+       // print (monstersLeft);
         if (monstersLeft == 0)
         {
             string nextLevel = "level " + (level + 1);

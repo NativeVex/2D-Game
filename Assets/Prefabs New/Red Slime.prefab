@@ -22,6 +22,10 @@ GameObject:
   - 212: {fileID: 212000010001716166}
   - 95: {fileID: 95000013325392578}
   - 136: {fileID: 136000012325109910}
+  - 114: {fileID: 114000010033375690}
+  - 195: {fileID: 195000013010604876}
+  - 114: {fileID: 114000012005540456}
+  - 114: {fileID: 114000014198568790}
   m_Layer: 0
   m_Name: Red Slime
   m_TagString: Enemy
@@ -37,7 +41,7 @@ Transform:
   m_GameObject: {fileID: 1000010158939944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.14328696, y: 0.33984375, z: 0.104236476}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,6 +63,51 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010033375690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010158939944}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fbfe2124eff43e4b98bbda73060899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchingTurnSpeed: 120
+  searchingDuration: 4
+  sightRange: 20
+  walkSpeed: 1
+  wayPoints: []
+  eyes: {fileID: 0}
+  offset: {x: 0, y: 0.5, z: 0}
+  meshRendererFlag: {fileID: 0}
+  chaseTarget: {fileID: 0}
+  navMeshAgent: {fileID: 0}
+--- !u!114 &114000012005540456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010158939944}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ecb523a3b4f4c329337082776e57b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ATTACK: 0
+  DED: 0
+--- !u!114 &114000014198568790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010158939944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a01cd5b76884670b6fc8afdf27d599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136000012325109910
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -66,12 +115,32 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010158939944}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   m_Radius: 0.1
   m_Height: 0.1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &195000013010604876
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010158939944}
+  m_Enabled: 0
+  m_Radius: 0.1
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.1
+  m_BaseOffset: 0.05
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!212 &212000010001716166
 SpriteRenderer:
   m_ObjectHideFlags: 1

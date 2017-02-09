@@ -26,6 +26,7 @@ GameObject:
   - 195: {fileID: 195000010552442804}
   - 114: {fileID: 114000014272783542}
   - 114: {fileID: 114000010296845654}
+  - 114: {fileID: 114000011354003296}
   m_Layer: 0
   m_Name: Blue Slime
   m_TagString: Enemy
@@ -41,7 +42,7 @@ Transform:
   m_GameObject: {fileID: 1000011303434576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -69,11 +70,23 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011303434576}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3a01cd5b76884670b6fc8afdf27d599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000011354003296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011303434576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365f8987c37f748fa8699df61afb97ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!114 &114000013825191822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,8 +132,8 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011303434576}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   m_Radius: 0.1
   m_Height: 0.1
   m_Direction: 1

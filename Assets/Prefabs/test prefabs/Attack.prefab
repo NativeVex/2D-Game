@@ -24,6 +24,7 @@ GameObject:
   - 114: {fileID: 114000011077759310}
   - 114: {fileID: 114000011654439190}
   - 54: {fileID: 54000013593756050}
+  - 136: {fileID: 136000012264688490}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -98,12 +99,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54845d786ac140c4adf6f42b8272a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: []
+  tags:
+  - Enemy
   dmg: 5
   AttackScript: {fileID: 1000011169063264, guid: 11bb84f54544b4901bea432b92ff70fe,
     type: 2}
-  Player: {fileID: 1000010700393054, guid: 750984c592e2d224a8ab32e37e4644bd, type: 2}
-  dir: 0
+--- !u!136 &136000012264688490
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011002365062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011520389380
 SpriteRenderer:
   m_ObjectHideFlags: 1
