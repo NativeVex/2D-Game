@@ -19,6 +19,8 @@ public class CharacterControl : MonoBehaviour
 		GameObject VisualAttack = (GameObject)Instantiate (AttackPrefab,gameObject.transform.position,Quaternion.identity);
         //Debug.Log ("childcount = "+VisualAttack.transform.childCount);
         VisualAttack.transform.localScale = new Vector3(attackScale, attackScale, attackScale);
+        VisualAttack.GetComponent<VisualScript>().direction = dir;
+        VisualAttack.GetComponent<VisualScript>().runSpeed = runSpeed;
         Vector3 velocity = VisualAttack.GetComponent<Rigidbody>().velocity;
 		velocity = direction * magnitude;
         //VisualAttack.GetComponent<AttackScript>().dir = dir;
