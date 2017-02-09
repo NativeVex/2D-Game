@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
-    public int monstersLeft;
+    private int monstersLeft;
+    public float scale;
     public int startAmount;
     public GameObject[] Monsters;
     public ArrayList monsterLocations = new ArrayList();
@@ -36,12 +37,16 @@ public class LevelManager : MonoBehaviour {
                 }
             }
             monsterLocations.Add(location);
+            obj.transform.localScale = new Vector3(scale, scale, scale);
             Instantiate(obj, location, Quaternion.Euler(angle, 0, 0));
+            obj.gameObject.name = Monsters[randObj].name;
         }
     }
 	
 	// Update is called once per frame
 	void Update () {
+        EnemyCount();
+       // print (monstersLeft);
         if (monstersLeft == 0)
         {
             string nextLevel = "level " + (level + 1);

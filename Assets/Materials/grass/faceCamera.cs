@@ -7,6 +7,7 @@ public class faceCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Camera cam = GameObject.Find("Camera").GetComponent<Camera>();
-		this.gameObject.transform.LookAt (cam.gameObject.transform);
+        Vector3 targetPosition = new Vector3(gameObject.transform.position.x, cam.gameObject.transform.position.y, cam.gameObject.transform.position.z);
+		this.gameObject.transform.LookAt (targetPosition);
 	}
 }
