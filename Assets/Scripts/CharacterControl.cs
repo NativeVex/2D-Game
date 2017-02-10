@@ -15,17 +15,6 @@ public class CharacterControl : MonoBehaviour
 	public int dir;
 	bool walking, run, attack, ded = false; //write to ded only when dead
 
-	void attackBundle(Vector3 direction, float magnitude, GameObject AttackPrefab, string[] tags){
-		GameObject VisualAttack = (GameObject)Instantiate (AttackPrefab,gameObject.transform.position,Quaternion.identity);
-        //Debug.Log ("childcount = "+VisualAttack.transform.childCount);
-        VisualAttack.transform.localScale = new Vector3(attackScale, attackScale, attackScale);
-        VisualAttack.GetComponent<VisualScript>().direction = dir;
-        VisualAttack.GetComponent<VisualScript>().runSpeed = runSpeed;
-        Vector3 velocity = VisualAttack.GetComponent<Rigidbody>().velocity;
-		velocity = direction * magnitude;
-        //VisualAttack.GetComponent<AttackScript>().dir = dir;
-    }
-
     // Use this for initialization
     void Start()
     {
@@ -53,33 +42,33 @@ public class CharacterControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Quaternion right = Quaternion.FromToRotation (Vector3.forward, Vector3.right);
-            Quaternion left = Quaternion.FromToRotation(Vector3.forward, Vector3.left);
-            Quaternion full = Quaternion.FromToRotation(Vector3.forward, Vector3.back);
+            //Quaternion left = Quaternion.FromToRotation(Vector3.forward, Vector3.left);
+            //Quaternion full = Quaternion.FromToRotation(Vector3.forward, Vector3.back);
             switch (dir)
             {
                 case 0:
-                    attackBundle(Vector3.forward, 5, Attack, new string[] {
-                    "AI",
-                    "Player"
-                });
+					new AttackBundle(new string[] {
+	                    "AI",
+	                    "Player"
+				}, 5, 0, runSpeed,Attack,gameObject);
                     break;
                 case 1:
-                    attackBundle(Vector3.back, 5, Attack, new string[] {
-                    "AI",
-                    "Player"
-                });
+					new AttackBundle(new string[] {
+						"AI",
+						"Player"
+				}, 5,1, runSpeed,Attack,gameObject);
                     break;
                 case 2:
-                    attackBundle(Vector3.right, 5, Attack, new string[] {
-                    "AI",
-                    "Player"
-                });
+					new AttackBundle(new string[] {
+						"AI",
+						"Player"
+				}, 5, 2, runSpeed,Attack,gameObject);
                     break;
                 case 3:
-                    attackBundle(Vector3.left, 5, Attack, new string[] {
-                    "AI",
-                    "Player"
-                });
+					new AttackBundle(new string[] {
+						"AI",
+						"Player"
+				}, 5, 3, runSpeed,Attack,gameObject);
                     break;
             }
             attack = true;
