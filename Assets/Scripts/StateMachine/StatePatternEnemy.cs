@@ -10,7 +10,9 @@ public class StatePatternEnemy : MonoBehaviour
 	public Transform[] wayPoints;
 	public Transform eyes;
 	public Vector3 offset = new Vector3 (0,.5f,0);
-	public MeshRenderer meshRendererFlag;
+	//public MeshRenderer meshRendererFlag;
+	public float attackDistance;
+	public GameObject Attack;
 
     [HideInInspector] public Transform chaseTarget;
 	[HideInInspector] public IEnemyState currentState;
