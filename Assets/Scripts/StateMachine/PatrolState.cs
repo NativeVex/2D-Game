@@ -50,7 +50,7 @@ public class PatrolState : IEnemyState
 
 	void Patrol ()
 	{
-		enemy.meshRendererFlag.material.color = Color.green;
+		//enemy.meshRendererFlag.material.color = Color.green;
 		enemy.navMeshAgent.destination = enemy.wayPoints [nextWayPoint].position;
 		enemy.navMeshAgent.Resume ();
 

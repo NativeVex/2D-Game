@@ -60,25 +60,25 @@ public class CharacterControl : MonoBehaviour
 					new AttackBundle(new string[] {
 	                    "AI",
 	                    "Player"
-				}, 5, 0, runSpeed,Attack,gameObject);
+				}, 5, 0, runSpeed,Attack,gameObject,1);
                     break;
                 case 1:
 					new AttackBundle(new string[] {
 						"AI",
 						"Player"
-				}, 5,1, runSpeed,Attack,gameObject);
+				}, 5,1, runSpeed,Attack,gameObject,1);
                     break;
                 case 2:
 					new AttackBundle(new string[] {
 						"AI",
 						"Player"
-				}, 5, 2, runSpeed,Attack,gameObject);
+				}, 5, 2, runSpeed,Attack,gameObject,1);
                     break;
                 case 3:
 					new AttackBundle(new string[] {
 						"AI",
 						"Player"
-				}, 5, 3, runSpeed,Attack,gameObject);
+				}, 5, 3, runSpeed,Attack,gameObject,1);
                     break;
             }
             attack = true;

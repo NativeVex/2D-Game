@@ -4,7 +4,7 @@ using System.Collections;
 public class AttackBundle : MonoBehaviour
 {
 
-	public AttackBundle(string[] tags, int dmg, int dir, float speed,GameObject Prefab, GameObject parent){
+	public AttackBundle(string[] tags, int dmg, int dir, float speed,GameObject Prefab, GameObject parent,int scale){
 		Prefab = (GameObject)Instantiate (Prefab,parent.transform.position,Quaternion.identity);
 		Prefab.GetComponent<VisualScript> ().runSpeed = speed;
 		Prefab.GetComponent<VisualScript> ().direction = dir;
