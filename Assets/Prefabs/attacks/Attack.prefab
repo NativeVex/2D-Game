@@ -104,6 +104,8 @@ MonoBehaviour:
   dmg: 5
   AttackScript: {fileID: 1000011169063264, guid: 11bb84f54544b4901bea432b92ff70fe,
     type: 2}
+  direction: 0
+  runSpeed: 0
 --- !u!136 &136000012264688490
 CapsuleCollider:
   m_ObjectHideFlags: 1
