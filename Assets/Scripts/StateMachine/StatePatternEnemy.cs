@@ -6,7 +6,7 @@ public class StatePatternEnemy : MonoBehaviour
 	public float searchingTurnSpeed = 120f;
 	public float searchingDuration = 4f;
 	public float sightRange = 20f;
-    public float walkSpeed = 1.0f; 
+    public float walkSpeed = 1.0f;
 	public Transform[] wayPoints;
 	public Transform eyes;
 	public Vector3 offset = new Vector3 (0,.5f,0);
@@ -26,7 +26,31 @@ public class StatePatternEnemy : MonoBehaviour
 		patrolState = new PatrolState (this);
         
 		navMeshAgent = GetComponent<NavMeshAgent> ();
+		if (wayPoints.Length <= 0) {
+			popWaypoints (0);
+		} else {
+			for (int i = 0; i < wayPoints.Length; i++) {
+				if (wayPoints [i] == null) {
+					popWaypoints (wayPoints.Length);
+				}
+			}
+		}
 
+	}
+
+	void popWaypoints(int number){//TODO
+		if (number == 0) {
+			number = 5;
+		}
+		//do stuff here
+		wayPoints = new Transform[number];
+		for (int i = 0; i < number; i++) {
+			//kill me!
+			//Later.
+			//wayPoints [i] = new GameObject ();
+		}
+		//navMeshAgent.hasPath;
+//		NavMesh.CalculatePath (gameObject.transform.position,new Vector3(Random.value*lim,Random.value*lim),);
 	}
 
 	// Use this for initialization

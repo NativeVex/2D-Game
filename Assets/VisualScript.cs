@@ -13,8 +13,6 @@ public class VisualScript : MonoBehaviour {
     void Start()
     {
         AttackScript = Instantiate(AttackScript);
-        //  Player = Instantiate(Player);
-      //  AttackScript.GetComponent<AttackScript>().direction = direction;
         AttackScript.GetComponent<AttackScript>().dmg = dmg;
         AttackScript.GetComponent<AttackScript>().tags = tags;
         AttackScript.GetComponent<AttackScript>().Parent = gameObject;
