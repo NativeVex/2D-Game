@@ -20,10 +20,22 @@ public class ChaseState : IEnemyState
 
 	public void OnTriggerEnter (Collider other)
 	{
+        if (other.tag.Equals("Range"))
+        {
+            enemy.gameObject.transform.position = Vector3.MoveTowards(enemy.gameObject.transform.position, other.gameObject.transform.position, Time.deltaTime * 2);
+        }
+    }
 
-	}
 
-	public void ToPatrolState()
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.tag.Equals("Ranger"))
+        {
+
+        }
+    }
+    public void ToPatrolState()
 	{
 
 	}
@@ -57,10 +69,11 @@ public class ChaseState : IEnemyState
 
 	private void Chase()
 	{
-		//enemy.meshRendererFlag.material.color = Color.red;
-		enemy.navMeshAgent.destination = enemy.chaseTarget.position;
+        //enemy.meshRendererFlag.material.color = Color.red;
+        enemy.navMeshAgent.destination = enemy.chaseTarget.position;
 		enemy.navMeshAgent.Resume ();
 	}
+
 
 
 }

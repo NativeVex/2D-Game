@@ -18,14 +18,15 @@ public class AttackScript : MonoBehaviour {
 	}
 
 
-	void OnCollisionEnter(Collider col)	{
+	/*void OnCollisionEnter(Collider col)	{
 		foreach(string temp in tags){
 			if (col.gameObject.tag.Equals(temp))
 	        {
 				col.gameObject.GetComponent<HP> ().health-=dmg;
+                print(col.tag);
 				Destroy(Parent);
 	        }
-		}
-	} 
+		} 
+	}  */
 }
 

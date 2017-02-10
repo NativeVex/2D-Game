@@ -8,6 +8,7 @@ TagManager:
   - Range
   - AttackRange
   - Enemy
+  - Attack
   layers:
   - Default
   - TransparentFX

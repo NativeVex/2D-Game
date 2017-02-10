@@ -16,6 +16,7 @@ public class CharacterControl : MonoBehaviour
     const int DIR_FRONT = 0, DIR_BACK = 1, DIR_RIGHT = 2, DIR_LEFT =3;
 	public int dir;
 	bool walking, run, attack, ded = false; //write to ded only when dead
+    public int dmg;
 
     // Use this for initialization
     void Start()
@@ -27,9 +28,9 @@ public class CharacterControl : MonoBehaviour
     void FixedUpdate()
     {
         gameObject.GetComponent<Rigidbody>().position = new Vector3
-(Mathf.Clamp(gameObject.GetComponent<Rigidbody>().position.x, xMin, xMax),
-    gameObject.GetComponent<Rigidbody>().position.y,
-    Mathf.Clamp(gameObject.GetComponent<Rigidbody>().position.z, zMin, zMax));
+            (Mathf.Clamp(gameObject.GetComponent<Rigidbody>().position.x, xMin, xMax),
+             gameObject.GetComponent<Rigidbody>().position.y,
+             Mathf.Clamp(gameObject.GetComponent<Rigidbody>().position.z, zMin, zMax));
     }
 
     // FixedUpdate is used insead of Update to better handle the physics based jump
@@ -60,25 +61,25 @@ public class CharacterControl : MonoBehaviour
 					new AttackBundle(new string[] {
 	                    "AI",
 	                    "Player"
-				}, 5, 0, runSpeed,Attack,gameObject,1);
+				}, 5, 0, runSpeed,Attack,gameObject, attackScale);
                     break;
                 case 1:
 					new AttackBundle(new string[] {
 						"AI",
 						"Player"
-				}, 5,1, runSpeed,Attack,gameObject,1);
+				}, 5,1, runSpeed,Attack,gameObject, attackScale);
                     break;
                 case 2:
 					new AttackBundle(new string[] {
 						"AI",
 						"Player"
-				}, 5, 2, runSpeed,Attack,gameObject,1);
+				}, 5, 2, runSpeed,Attack,gameObject, attackScale);
                     break;
                 case 3:
 					new AttackBundle(new string[] {
 						"AI",
 						"Player"
-				}, 5, 3, runSpeed,Attack,gameObject,1);
+				}, 5, 3, runSpeed,Attack,gameObject, attackScale);
                     break;
             }
             attack = true;
@@ -96,7 +97,7 @@ public class CharacterControl : MonoBehaviour
             else
             {
                 transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime);
-            }
+            } 
         }
         else if (Input.GetKey(KeyCode.A))
         {
@@ -109,7 +110,7 @@ public class CharacterControl : MonoBehaviour
             else
             {
                 transform.Translate(Vector3.left * walkSpeed * Time.deltaTime);
-            }
+            } 
         }
         else if (Input.GetKey(KeyCode.S))
         {
@@ -122,7 +123,7 @@ public class CharacterControl : MonoBehaviour
             else
             {
                 transform.Translate(Vector3.back * walkSpeed * Time.deltaTime);
-            }
+            } 
         }
         else if (Input.GetKey(KeyCode.D))
         {
@@ -135,7 +136,7 @@ public class CharacterControl : MonoBehaviour
             else
             {
                 transform.Translate(Vector3.right * walkSpeed * Time.deltaTime);
-            }
+            } 
         }
         else
         {
@@ -145,6 +146,14 @@ public class CharacterControl : MonoBehaviour
         animator.SetBool("walking", walking);
         animator.SetBool("run", run);
         animator.SetBool("ded", ded);
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.tag.Equals("Enemy"))
+        {
+            gameObject.GetComponent<HP>().health -= dmg;
+        }
     }
    }
 

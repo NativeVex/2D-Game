@@ -41,7 +41,7 @@ public class FlowerRandGen : MonoBehaviour {
                 }
             }
             treeLocations.Add(location);
-            Instantiate(obj, location, Quaternion.Euler(0, 0, 0));
+            Instantiate(obj, location, obj.transform.rotation);
         }
     }
 }

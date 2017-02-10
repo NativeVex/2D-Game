@@ -20,9 +20,22 @@ public class PatrolState : IEnemyState
 
 	public void OnTriggerEnter (Collider other)
 	{
-		if (other.gameObject.CompareTag ("Player"))
+		if (other.tag.Equals("Player"))
 			ToAlertState ();
-	}
+        if (other.tag.Equals("Range"))
+        {
+            enemy.gameObject.transform.position = Vector3.MoveTowards(enemy.gameObject.transform.position, other.gameObject.transform.position, Time.deltaTime * 2);
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.tag.Equals("Ranger"))
+        {
+
+        }
+    }
+
 
 	public void ToPatrolState()
 	{
@@ -46,9 +59,9 @@ public class PatrolState : IEnemyState
 			enemy.chaseTarget = hit.transform;
 			ToChaseState();
 		}
-		if (hit.collider != null) {
+		/*if (hit.collider != null) {
 			Debug.Log (hit.collider.tag);
-		}
+		} */
 	}
 
 	void Patrol ()
@@ -61,7 +74,6 @@ public class PatrolState : IEnemyState
 			nextWayPoint =(nextWayPoint + 1) % enemy.wayPoints.Length;
 
 		}
-
-
 	}
+
 }

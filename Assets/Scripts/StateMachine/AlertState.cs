@@ -20,10 +20,21 @@ public class AlertState : IEnemyState
 
 	public void OnTriggerEnter (Collider other)
 	{
+        if (other.tag.Equals("Range"))
+        {
+            enemy.gameObject.transform.position = Vector3.MoveTowards(enemy.gameObject.transform.position, other.gameObject.transform.position, Time.deltaTime * 2);
+        }
+    }
 
-	}
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.tag.Equals("Ranger"))
+        {
 
-	public void ToPatrolState()
+        }
+    }
+
+    public void ToPatrolState()
 	{
 		enemy.currentState = enemy.patrolState;
 		searchTimer = 0f;

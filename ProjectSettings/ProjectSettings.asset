@@ -510,7 +510,7 @@ PlayerSettings:
   XboxOne::VR::enabledDevices: []
   iOS::VR::enabledDevices: []
   tvOS::VR::enabledDevices: []
-  cloudProjectId: 7b985d64-3f76-4a7e-8049-ed95bb56adee
+  cloudProjectId: bf40982b-28fd-4136-8a22-937cf6d66fa6
   projectName: 2.5D Game
-  organizationId: artur-2939073
+  organizationId: linje2
   cloudEnabled: 0
