@@ -46,6 +46,9 @@ public class PatrolState : IEnemyState
 			enemy.chaseTarget = hit.transform;
 			ToChaseState();
 		}
+		if (hit.collider != null) {
+			Debug.Log (hit.collider.tag);
+		}
 	}
 
 	void Patrol ()
