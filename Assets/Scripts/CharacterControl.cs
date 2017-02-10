@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class CharacterControl : MonoBehaviour
 {
+    public float xMin, xMax, zMin, zMax;
 
     public float walkSpeed = 1; // player left right walk speed
     public float runSpeed = 2;
@@ -22,11 +24,19 @@ public class CharacterControl : MonoBehaviour
 		animator = gameObject.transform.GetComponentInChildren<Animator>();
         attackAnim = Attack.GetComponent<Animator>();
     }
+    void FixedUpdate()
+    {
+        gameObject.GetComponent<Rigidbody>().position = new Vector3
+(Mathf.Clamp(gameObject.GetComponent<Rigidbody>().position.x, xMin, xMax),
+    gameObject.GetComponent<Rigidbody>().position.y,
+    Mathf.Clamp(gameObject.GetComponent<Rigidbody>().position.z, zMin, zMax));
+    }
 
     // FixedUpdate is used insead of Update to better handle the physics based jump
     void Update()
     {
         //is dead?
+        
         if (gameObject.GetComponent<HP>().GetHealth() <= 0) {
                ded = true;
                //WaitUntil (animator.IsInTransition); //if looping is a transition?

@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 495060}
   - 33: {fileID: 3321858}
   - 23: {fileID: 2389290}
+  - 64: {fileID: 64000012086478114}
   m_Layer: 0
   m_Name: Plane.026
   m_TagString: Untagged
@@ -77,3 +78,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180848}
   m_IsPrefabParent: 1
+--- !u!64 &64000012086478114
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300024, guid: 6d47a798ff5bab5488c68456937884d1, type: 3}

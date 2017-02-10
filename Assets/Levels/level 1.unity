@@ -524,6 +524,7 @@ GameObject:
   - 114: {fileID: 83828718}
   - 136: {fileID: 83828717}
   - 114: {fileID: 83828716}
+  - 54: {fileID: 83828721}
   m_Layer: 0
   m_Name: playerTrolley
   m_TagString: Untagged
@@ -567,6 +568,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b0a77d449791e4caff8229a43a7098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xMin: -47
+  xMax: 47
+  zMin: -47
+  zMax: 47
   walkSpeed: 10
   runSpeed: 20
   attackScale: 2
@@ -596,13 +601,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 83828715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.2, y: 2.23, z: 0}
+  m_LocalPosition: {x: 8.1, y: 2.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1795472657}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &83828721
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83828715}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &93319485
 GameObject:
   m_ObjectHideFlags: 0
