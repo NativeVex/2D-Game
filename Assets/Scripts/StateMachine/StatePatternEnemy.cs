@@ -17,7 +17,9 @@ public class StatePatternEnemy : MonoBehaviour
 	public float attackDistance;
 	public GameObject Attack;
     public bool following = false;
+    public GameObject Player;
     public float Xmin, Xmax, Zmin, Zmax;
+    public int nextWayPoint;
 
     [HideInInspector] public Transform chaseTarget;
 	[HideInInspector] public IEnemyState currentState;
@@ -64,6 +66,7 @@ public class StatePatternEnemy : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+        Player = GameObject.Find("playerTrolley");
 
         if (following == false)
         {
@@ -86,32 +89,48 @@ public class StatePatternEnemy : MonoBehaviour
                 wayPoints[i] = newWayPoint;
                 wayPoints[i] = (Transform)Instantiate(newWayPoint, random, Quaternion.Euler(0, 0, 0));
             }
-            currentState = patrolState;
+         //   currentState = patrolState;
         }
 
     }
 
+   /* void FixedUpdate()
+    {
+        if (following == true)
+        {
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, Player.gameObject.transform.position, Time.deltaTime * 0.1f);
+        }
+    } */
 	// Update is called once per frame
 	void Update () 
 	{
-		currentState.UpdateState ();
+        if (following == true)
+        {
+            this.navMeshAgent.Stop();
+        }
+        else
+        {
+            Patrol();
+        }
 	}
 
-	private void OnTriggerEnter(Collider other)
+    void Patrol()
+    {
+        //enemy.meshRendererFlag.material.color = Color.green;
+        this.navMeshAgent.destination = this.wayPoints[nextWayPoint].position;
+        this.navMeshAgent.Resume();
+
+        if (this.navMeshAgent.remainingDistance <= this.navMeshAgent.stoppingDistance && !this.navMeshAgent.pathPending)
+        {
+            nextWayPoint = (nextWayPoint + 1) % this.wayPoints.Length;
+        }
+    }
+
+  /*  private void OnTriggerEnter(Collider other)
 	{
         if (other.tag.Equals("Player"))
         {
-            currentState.OnTriggerEnter (other);
+          //  currentState.OnTriggerEnter (other);
         }
-        if (other.tag.Equals("Range")) {
-            following = true;
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, other.gameObject.transform.position, Time.deltaTime * 2);
-        }
-    }
-    void OnTriggerExit(Collider col)
-    {
-        if (col.tag.Equals("Range")){
-            following = false;
-        }
-    }
+    } */
 }

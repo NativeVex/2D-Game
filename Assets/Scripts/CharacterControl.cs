@@ -148,13 +148,13 @@ public class CharacterControl : MonoBehaviour
         animator.SetBool("ded", ded);
     }
 
-    void OnTriggerEnter(Collider col)
+   /* void OnTriggerEnter(Collider col)
     {
         if (col.tag.Equals("Enemy"))
         {
             gameObject.GetComponent<HP>().health -= dmg;
         }
-    }
+    } */
    }
 
 

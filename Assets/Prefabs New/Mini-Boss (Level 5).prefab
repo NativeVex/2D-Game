@@ -44,7 +44,7 @@ Transform:
   m_GameObject: {fileID: 1000013856526728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.14328696, y: 0.33984375, z: 0.104236476}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -169,7 +169,7 @@ MonoBehaviour:
   audio: {fileID: 8300000, guid: 97c6a978cb094eb4fb7515d2aa16ac10, type: 3}
   ATTACK: 0
   DED: 0
-  speed: 1
+  speed: 0
   dmg: 2
 --- !u!114 &114000011725675508
 MonoBehaviour:
@@ -203,10 +203,12 @@ MonoBehaviour:
   attackDistance: 0
   Attack: {fileID: 1000013508510420, guid: 4475f358dd9a741feac7adb08a0e0d01, type: 2}
   following: 0
+  Player: {fileID: 0}
   Xmin: -5
   Xmax: 5
   Zmin: -5
   Zmax: 5
+  nextWayPoint: 0
   chaseTarget: {fileID: 0}
   navMeshAgent: {fileID: 0}
 --- !u!114 &114000012826716570
@@ -253,7 +255,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1000013856526728}
   m_Enabled: 1
   m_Radius: 0.235
-  m_Speed: 2
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

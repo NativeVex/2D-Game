@@ -27,9 +27,9 @@ GameObject:
   - 114: {fileID: 114000010413476100}
   - 114: {fileID: 114000012136366726}
   - 114: {fileID: 114000011428536678}
-  - 54: {fileID: 54000011645282740}
   - 82: {fileID: 82000010266497090}
-  m_Layer: 0
+  - 54: {fileID: 54000012417769536}
+  m_Layer: 9
   m_Name: Green Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!54 &54000011645282740
+--- !u!54 &54000012417769536
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -197,10 +197,12 @@ MonoBehaviour:
   attackDistance: 0
   Attack: {fileID: 1000013508510420, guid: 4475f358dd9a741feac7adb08a0e0d01, type: 2}
   following: 0
+  Player: {fileID: 0}
   Xmin: -50
   Xmax: 50
   Zmin: -50
   Zmax: 50
+  nextWayPoint: 0
   chaseTarget: {fileID: 0}
   navMeshAgent: {fileID: 0}
 --- !u!114 &114000011428536678

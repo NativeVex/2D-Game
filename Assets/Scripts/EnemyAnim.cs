@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor;
-using UnityEditor.Animations;
 //bbusing UnityEngine.AI;
 [RequireComponent (typeof (NavMeshAgent))]
 
@@ -25,17 +23,25 @@ public class EnemyAnim : MonoBehaviour {
     public float speed;
     Animator anim;
     public int dmg;
-
+    private float lastDamage = 0;
     void Start()
     {
         anim = this.GetComponent<Animator>();
     }
 
+
     void Update(){
         if (gameObject.GetComponent<HP>().health <= 0)
         {
+            DED = true;
+            anim.SetBool("Dead", true);
+            
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Destroy") || anim.GetCurrentAnimatorStateInfo(0).IsName("Destroy "))
+        {
             Destroy(gameObject);
         }
+
 		Agent = gameObject.GetComponent<NavMeshAgent>();
 		D = GameObject.Find("Camera").GetComponent<Camera>().transform.position;
 		B = Agent.steeringTarget;
@@ -56,8 +62,25 @@ public class EnemyAnim : MonoBehaviour {
 		}
 	}
 
+    void FixedUpdate()
+    {
+        if (lastDamage >= 1)
+        {
+            lastDamage = 0;
+        }
+        lastDamage += Time.fixedDeltaTime;
+    }
+
     void OnTriggerEnter(Collider col)
     {
+        if (col.tag.Equals("Player"))
+        {
+            col.gameObject.GetComponent<HP>().health -= dmg;
+            
+            ATTACK = true;
+            print("Attack = " + ATTACK);
+            anim.SetBool("Attack", ATTACK);
+        }
         if (col.tag.Equals("Attack"))
         {
             gameObject.GetComponent<HP>().health -= dmg;
@@ -66,9 +89,49 @@ public class EnemyAnim : MonoBehaviour {
             audio1.clip = audio;
             audio1.Play();
         }
+     /*   if (col.tag.Equals("AttackRange"))
+        {
+            ATTACK = true;
+            anim.SetBool("Attack", ATTACK);
+        } */
         if (col.tag.Equals("Range"))
         {
-           gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, col.gameObject.transform.position, Time.deltaTime * 2);
+            gameObject.GetComponent<StatePatternEnemy>().following = true;
+        }
+    }
+
+    void OnTriggerStay(Collider col)
+    {
+        if (col.tag.Equals("Range"))
+        {
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, col.gameObject.transform.position, Time.deltaTime * speed);
+        }
+        if (col.tag.Equals("Player"))
+        {
+            if (lastDamage >= 1)
+            {
+                col.gameObject.GetComponent<HP>().health -= dmg;
+            }
+            
+        }
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        /*  if (col.tag.Equals("AttackRange"))
+          {
+              ATTACK = false;
+              anim.SetBool("Attack", ATTACK);
+          } */
+       if (col.tag.Equals("Player"))
+        {
+            ATTACK = false;
+            print("Attack = " + ATTACK);
+            anim.SetBool("Attack", ATTACK);
+        }
+        if (col.tag.Equals("Range"))
+        {
+            gameObject.GetComponent<StatePatternEnemy>().following = false;
         }
     }
 }

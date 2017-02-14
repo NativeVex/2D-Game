@@ -27,9 +27,9 @@ GameObject:
   - 114: {fileID: 114000014272783542}
   - 114: {fileID: 114000010296845654}
   - 114: {fileID: 114000011354003296}
-  - 54: {fileID: 54000013456643474}
   - 82: {fileID: 82000011439452886}
-  m_Layer: 0
+  - 54: {fileID: 54000012294041052}
+  m_Layer: 9
   m_Name: Blue Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!54 &54000013456643474
+--- !u!54 &54000012294041052
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -204,10 +204,12 @@ MonoBehaviour:
   attackDistance: 0
   Attack: {fileID: 1000013508510420, guid: 4475f358dd9a741feac7adb08a0e0d01, type: 2}
   following: 0
+  Player: {fileID: 0}
   Xmin: -50
   Xmax: 50
   Zmin: -50
   Zmax: 50
+  nextWayPoint: 0
   chaseTarget: {fileID: 0}
   navMeshAgent: {fileID: 0}
 --- !u!114 &114000014272783542
